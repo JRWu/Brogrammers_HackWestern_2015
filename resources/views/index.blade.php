@@ -28,8 +28,8 @@
 </head>
 <body>
 <section id="home">
-    <h1>Welcome to 1-800 Hotline Bling</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, sint illum earum sunt repudiandae aperiam ad dignissimos. Libero, totam, mollitia numquam vero ipsa exercitationem quas placeat velit officiis autem architecto.</p>
+    <h1>About us</h1>
+    <p></p>
 </section>
 <section id="plans">
     <h1>Who are you going with?</h1>
