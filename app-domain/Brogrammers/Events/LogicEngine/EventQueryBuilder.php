@@ -65,8 +65,8 @@ class EventQueryBuilder
             }
         }
 
-        if(!array_key_exists("Latitude", $request[self::LOCATION]) ||
-            !array_key_exists("Longitude", $request[self::LOCATION]))
+        if(!array_key_exists("latitude", $request[self::LOCATION]) ||
+            !array_key_exists("longitude", $request[self::LOCATION]))
         {
             throw new Exception('Missing Coordinates: ' . $request[self::LOCATION]);
         }
@@ -105,7 +105,7 @@ class EventQueryBuilder
         $eventQuery->dateType = $this->dateType;
         $eventQuery->category = $category;
         $eventQuery->location = $this->location;
-        
+
         if (in_array($category, EventQuery::GOOGLE_TYPES)) {
             $eventQuery->type = EventQuery::GOOGLE_TYPE_QUERY;
         }
