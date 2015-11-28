@@ -5,7 +5,7 @@
     <title>1-800 Hotline Bling</title>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../styles/main.css"/>
+    <link rel="stylesheet" href="../styles/friends.css"/>
 
     <!-- Internet Explorer HTML5 enabling code: -->
 
@@ -27,26 +27,13 @@
     </script>
 </head>
 <body>
-<section id="home">
-    <h1>About us</h1>
-    <p align = "center">You are probably wondering what to do tonight or where to go, right? Well you are in the right spot! " " helps you decide on exactly
-    what you want to do and where to go. We have been in the exact same spot as you way more times than we can honestly count.
-    That's why we built this website that will help you figure out what activities to participate in! Our website allows
-    the user to chose who to go with: family member, with friends, or with their significant other. After this is chosen,
-    the user's location is taken and a radius is formed around it. Once this is done, the user decides on what events
-    he/she is most interested in. After these simple steps are completed, a map will show all the activities that the user
-    can participate in, whether it's just to watch a movie with their significant other, go to the bars with their friends
-    or to go camping with family.</p>
-</section>
 <section id="plans">
     <h1>Who are you going with?</h1>
-    <p><a href="{{ url('/family') }}">Family</a></p>
-    <p><a href="{{ url('/friends') }}">Friend</a></p>
-    <p><a href="{{ url('/partner') }}">Partner</a></p>
+    <p><a href="#">Friend</a></p>
 </section>
 <section id="contact">
     <h1>Contact</h1>
-    <table align = "center">
+    <table>
      <tr>
          <td>Edmund Luong</td>
          <td>Symon Luu</td>
@@ -70,12 +57,12 @@
          <td>Computer Science</td>
          <td>Computer Science</td>
      </table>
-    <p align = "center"> &copy; 2015, Inc - All Rights Reserved</p>
+    <p> &copy; 2015, Inc - All Rights Reserved</p>
 </section>
 
 <nav>
     <ul>
-        <li><a href="#home" class="scroll">Home</a></li>
+        <li><a href="{{ url('/') }}">Home</a></li>
         <li><a href="#plans" class="scroll">Plans</a></li>
         <li><a href="#contact" class="scroll">Contact</a></li>
     </ul>

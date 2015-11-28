@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/family', function () {
+    return view('family');
+});
+
+Route::get('/friends', function () {
+    return view('friends');
+});
+
+Route::get('/partner', function () {
+    return view('partner');
+});
