@@ -60,10 +60,13 @@ section
 
 #home
 {
-    background: url(../img/back7.jpg) no-repeat;
-    background-size: 100% 100%;
     color: #fff;
     text-align: center;
+}
+#home1
+{
+    background: url(../img/back7.jpg) no-repeat;
+    background-size: 100% 100%;
 }
 
 h1
