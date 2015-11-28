@@ -29,10 +29,29 @@
 <body>
 <section id="plans">
     <div align = "center">
-        <h1>Partner</h1>
-        Check all that apply:
+        Check all that applies!!
         <br></br>
-        Mini Put: <input type = "checkbox" name = "Golf" >
+        Tennis/Badminton: <input type = "checkbox" name = "Tennis" >
+        <br></br>
+        Snowboarding/Skiing: <input type = "checkbox" name = "Skiing">
+        <br></br>
+        Art Gallery: <input type = "checkbox" name = "Gallery">
+        <br></br>
+        Fancy Restaurant/Fine Dining: <input type = "checkbox" name = "Restaurant">
+        <br></br>
+        Amusement Park: <input type = "checkbox" name = "Park">
+        <br></br>
+        Camping: <input type = "checkbox" name = "Camping">
+        <br></br>
+        Rave/Edm: <input type ="checkbox" name = "Rave">
+        <br></br>
+        Bars: <input type = "checkbox" name = "Bars">
+        <br></br>
+        Pool <input type = "checkbox" name = "Pool" >
+        <br></br>
+        Beach: <input type = "checkbox" name = "Beach">
+        <br></br>
+        Mini Put: <input type = "checkbox" name = "Golf">
         <br></br>
         Concert: <input type = "checkbox" name = "Concert">
         <br></br>
@@ -40,9 +59,9 @@
         <br></br>
         Boating/Water Sports: <input type = "checkbox" name = "Boat">
         <br></br>
-        PaintBall/Airsoft: <input type = "checkbox" name = "Guns">
+        Laser Tag: <input type = "checkbox" name = "Laser">
         <br></br>
-        Laser Tag: <input type = "checkbox" name = "Laser Tag">
+        Movies/Drive-in <input type = "checkbox" name = "Movies">
         <br></br>
         Max Radius (in KMs): <input type = "number" name ="radius">
         <br></br>

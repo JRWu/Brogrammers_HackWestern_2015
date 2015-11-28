@@ -25,10 +25,31 @@
         });
 
     </script>
+    <script language = "javascript" type ="text/javascript">
+        function getCheckedBoxes(chkboxName){
+            console.log('clal')
+            var checkboxes = document.getElementsByName(chkboxName);
+            console.log(checkboxes)
+            var checkboxesChecked = [];
+            // Loop over them all
+            $('input[type="checkbox"]').each(function(){
+                console.log('looping')
+                // stick to the checked ones onto an array
+                if(this.checked){
+                   checkboxesChecked.push(1);
+                } else {
+                    checkboxesChecked.push(0);
+                }
+                console.log(checkboxesChecked)
+            })
+            // return the array if it is non-empty or null
+            //return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+        }
+    </script>
 </head>
 <body>
 <section id="plans">
-    <div align = "center">
+    <form align = "center">
     <h1>Family</h1>
         Check all that apply:
         <br></br>
@@ -40,7 +61,21 @@
         <br></br>
         Camping: <input type = "checkbox" name = "Camping">
         <br></br>
-        Shooting Range: <input type = "checkbox" name = "Range">
+        Pool: <input type = "checkbox" name = "Pool">
+        <br></br>
+        Beach: <input type = "checkbox" name = "Beach">
+        <br></br>
+        Movies/Drive-in: <input type = "checkbox" name = "Movies">
+        <br></br>
+        Concert: <input type = "checkbox" name = "Sushi">
+        <br></br>
+        Laser Tag: <input type = "checkbox" name = "Laser">
+        <br></br>
+        Sushi: <input type = "checkbox" name = "Sushi">
+        <br></br>
+        Boating/Water Sports: <input type = "checkbox" name = "Boat">
+        <br></br>
+        Mini Put: <input type = "checkbox" name = "Golf">
         <br></br>
         Mesuem: <input type = "checkbox" name = "Museum">
         <br></br>
@@ -48,8 +83,8 @@
         <br></br>
         Max Radius (in KMs): <input type = "number" name ="radius">
         <br></br>
-        <input type = "submit" value = "Submit!">
-    </div>
+        <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();">
+    </form>
 </section>
 <section id="contact">
     <h1>Contact</h1>

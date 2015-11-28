@@ -32,17 +32,37 @@
         <h1>Friend</h1>
         Check all that apply:
         <br></br>
+        Tennis/Badminton: <input type = "checkbox" name = "Tennis" >
+        <br></br>
+        Snowboarding/Skiing: <input type = "checkbox" name = "Skiing">
+        <br></br>
+        Amusement Park: <input type = "checkbox" name = "Park">
+        <br></br>
+        Camping: <input type = "checkbox" name = "Camping">
+        <br></br>
+        Rave/Edm: <input type ="checkbox" name = "Rave">
+        <br></br>
         Pool <input type = "checkbox" name = "Pool" >
         <br></br>
         Beach: <input type = "checkbox" name = "Beach">
         <br></br>
+        Mini Put: <input type = "checkbox" name = "Golf">
+        <br></br>
+        Concert: <input type = "checkbox" name = "Concert">
+        <br></br>
+        Sushi: <input type = "checkbox" name = "Sushi">
+        <br></br>
+        Boating/Water Sports: <input type = "checkbox" name = "Boat">
+        <br></br>
+        Laser Tag: <input type = "checkbox" name = "Laser">
+        <br></br>
+        Paintball/Airsoft: <input = "checkbox" name = "Guns">
+        <br></br>
         Movies/Drive-in <input type = "checkbox" name = "Movies">
         <br></br>
-        Fine Dining: <input type = "checkbox" name = "Restaurants">
+        Shooting Range: <input type = "checkbox" name = "Range">
         <br></br>
         Bars: <input type = "checkbox" name = "Bars">
-        <br></br>
-        Art Gallery: <input type = "checkbox" name = "Gallery">
         <br></br>
         Max Radius (in KMs): <input type = "number" name ="radius">
         <br></br>
