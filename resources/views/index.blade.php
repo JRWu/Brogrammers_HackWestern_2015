@@ -48,29 +48,17 @@
     <h1>Contact</h1>
     <table align = "center">
      <tr>
-         <td>Edmund Luong</td>
-         <td>Symon Luu</td>
-         <td>Valmir Verbani</td>
-         <td>Jerry Wu</td>
+         <td>Edmund Luong <br/> Western University <br/>
+         eluong3 (at) uwo (dot) ca <br/> Computer Science</td>
+         <td>Jerry Wu <br/> Western University <br/>
+         jwu424 (at) uwo (dot) ca <br/> Computer Science</td>
+         <td>Valmir Verbani <br/> Western University <br/>
+         vverbani (at) uwo (dot) ca <br/> Computer Science</td>
+         <td>Symon Luu <br/> Fanshawe College <br/>
+         s_luu (at) fanshaweonline (dot) ca <br/> Internet Web Development & Applications</td>
      </tr>
-     <tr>
-         <td>Western University</td>
-         <td>Fanshawe College</td>
-         <td>Western University</td>
-         <td>Western University</td>
-     </tr>
-     <tr>
-         <td>eluong3 at uwo dot ca</td>
-         <td>s_luu at fanshaweonline dot ca</td>
-         <td>jwu424 at uwo dot ca</td>
-         <td>vverbani at uwo dot ca</td>
-     </tr>
-         <td>Computer Science</td>
-         <td>Web Development</td>
-         <td>Computer Science</td>
-         <td>Computer Science</td>
      </table>
-    <p align = "center"> &copy; 2015, Inc - All Rights Reserved</p>
+    &copy; 2015, Inc - All Rights Reserved
 </section>
 
 <nav>

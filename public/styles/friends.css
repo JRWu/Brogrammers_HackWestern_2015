@@ -115,7 +115,14 @@ h1
     padding-left: 15%;
 }
 
-
+#contact td
+{
+    font-size: 2em;
+    color: #fff;
+    padding: 2em; /* uses font size of element for padding and margin - so 1em padding = 16*2 or 32 */
+    text-decoration: none;
+    display: inline-block;
+}
 
 
 
