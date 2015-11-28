@@ -28,11 +28,11 @@
 </head>
 <body>
 <section id="home">
-    <h1>Welcome to the Design Studio</h1>
+    <h1>Welcome to 1-800 Hotline Bling</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, sint illum earum sunt repudiandae aperiam ad dignissimos. Libero, totam, mollitia numquam vero ipsa exercitationem quas placeat velit officiis autem architecto.</p>
 </section>
-<section id="portfolio">
-    <h1>Our Portfolio</h1>
+<section id="plans">
+    <h1>Welcome to 1-800 Plans</h1>
 </section>
 <section id="contact">
     <h1>Contact the Design Studio</h1>
@@ -42,7 +42,7 @@
 <nav>
     <ul>
         <li><a href="#home" class="scroll">Home</a></li>
-        <li><a href="#portfolio" class="scroll">Portfolio</a></li>
+        <li><a href="#plans" class="scroll">Plans</a></li>
         <li><a href="#contact" class="scroll">Contact</a></li>
     </ul>
 </nav>
