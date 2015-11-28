@@ -8,6 +8,8 @@
 
 namespace Brogrammers\Events\LogicEngine;
 
+use Exception;
+
 
 /**
  * Class EventQueryBuilder
@@ -15,6 +17,9 @@ namespace Brogrammers\Events\LogicEngine;
  */
 class EventQueryBuilder
 {
+    const DISTANCE = "distance";
+    const TYPE = "type";
+    const CATEGORIES = 'categories';
 
     /**
      * @var location describes how far the user is willing to travel for each activity
@@ -34,16 +39,31 @@ class EventQueryBuilder
 
     public function __construct(array $request)
     {
-        // have function that checks validity of array
         $this->validateRequest($request);
 
-        $this->location = $request["distance"];     // Fix the "lcoation" label based on what S and V give us
-        $this->requesttype = $request["type"];      // Depends on Fam/Friends/Partner
-        foreach($request['category'] as $category) {    // Loops through the incoming categories
-            $this->categories[] = $category;
+        $this->location = $request[self::DISTANCE];     // Fix the "lcoation" label based on what S and V give us
+        $this->requesttype = $request[self::TYPE];      // Depends on Fam/Friends/Partner
+        foreach ($request[self::CATEGORIES] as $key => $category) {    // Loops through the incoming categories
+            $this->categories[$key] = $category;
         }
     }
 
+    private function validateRequest($request)
+    {
+        $expectedKeys = [
+            self::DISTANCE,
+            self::TYPE,
+            self::CATEGORIES
+        ];
+
+        foreach ($expectedKeys as $key) {
+            if (!array_key_exists($key, $request) || empty($request[$key])) {
+                throw new Exception('Missing expected keys' . $key);
+            }
+        }
+    }
+
+    // checks t/f value of category
 
     public function buildQuery()
     {
@@ -59,18 +79,26 @@ class EventQueryBuilder
         return $queryKeys;
     }
 
-    // checks t/f value of category
     public function filterCategories()
     {
         $filteredCategories = [];
 
-        foreach ($this->categories as $category) {
+        foreach ($this->categories as $key => $category) {
             if ($category === true) {
-                $filteredCategories[] = $category;
+                $filteredCategories[$key] = $this->translateCategories($category);
             }
         }
 
         return $filteredCategories;
     }
+
+    // This takes the activities and translates them to places
+    // How to differentiate
+    public function translateCategories($category)
+    {
+
+
+    }
+
 
 }
