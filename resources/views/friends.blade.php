@@ -25,50 +25,68 @@
         });
 
     </script>
+    <script language = "javascript" type ="text/javascript">
+        function getCheckedBoxes(chkboxName){
+            console.log('clal')
+            var checkboxes = document.getElementsByName(chkboxName);
+            console.log(checkboxes)
+            var checkboxesChecked = [];
+            // Loop over them all
+            $('input[type="checkbox"]').each(function(){
+                console.log('looping')
+                // stick to the checked ones onto an array
+                if(this.checked){
+                    checkboxesChecked.push(1);
+                } else {
+                    checkboxesChecked.push(0);
+                }
+                console.log(checkboxesChecked)
+            })
+            // return the array if it is non-empty or null
+            //return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+        }
+    </script>
 </head>
 <body>
 <section id="plans">
     <div align = "center">
         <h1>Friend</h1>
         Check all that apply:
-        <br></br>
-        Tennis/Badminton: <input type = "checkbox" name = "Tennis" >
-        <br></br>
-        Snowboarding/Skiing: <input type = "checkbox" name = "Skiing">
-        <br></br>
-        Amusement Park: <input type = "checkbox" name = "Park">
-        <br></br>
-        Camping: <input type = "checkbox" name = "Camping">
-        <br></br>
-        Rave/Edm: <input type ="checkbox" name = "Rave">
-        <br></br>
-        Pool <input type = "checkbox" name = "Pool" >
-        <br></br>
-        Beach: <input type = "checkbox" name = "Beach">
-        <br></br>
-        Mini Put: <input type = "checkbox" name = "Golf">
-        <br></br>
-        Concert: <input type = "checkbox" name = "Concert">
-        <br></br>
-        Sushi: <input type = "checkbox" name = "Sushi">
-        <br></br>
-        Boating/Water Sports: <input type = "checkbox" name = "Boat">
-        <br></br>
-        Laser Tag: <input type = "checkbox" name = "Laser">
-        <br></br>
-        Paintball/Airsoft: <input = "checkbox" name = "Guns">
-        <br></br>
-        Movies/Drive-in <input type = "checkbox" name = "Movies">
-        <br></br>
-        Shooting Range: <input type = "checkbox" name = "Range">
-        <br></br>
-        Bars: <input type = "checkbox" name = "Bars">
-        <br></br>
-        Max Radius (in KMs): <input type = "number" name ="radius">
-        <br></br>
-        <input type = "submit" value = "Submit!">
+        <br><br/>
+        Tennis/Badminton: <input type = "checkbox" name = "tennis"/>
+        <br><br/>
+        Snowboarding/Skiing: <input type = "checkbox" name = "skiing"/>
+        <br><br/>
+        Amusement Park: <input type = "checkbox" name = "park"/>
+        <br><br/>
+        Camping: <input type = "checkbox" name = "camping"/>
+        <br><br/>
+        Rave/Edm: <input type ="checkbox" name = "rave"/>
+        <br><br/>
+        Pool <input type = "checkbox" name = "pool"/>
+        <br><br/>
+        Beach: <input type = "checkbox" name = "beach"/>
+        <br><br/>
+        Mini Put: <input type = "checkbox" name = "golf"/>
+        <br><br/>
+        Concert: <input type = "checkbox" name = "concert"/>
+        <br><br/>
+        Sushi: <input type = "checkbox" name = "sushi"/>
+        <br><br/>
+        Boating/Water Sports: <input type = "checkbox" name = "boat"/>
+        <br><br/>
+        Laser Tag: <input type = "checkbox" name = "laser"/>
+        <br><br/>
+        Paintball/Airsoft: <input type = "checkbox" name = "guns"/>
+        <br><br/>
+        Movies/Drive-in <input type = "checkbox" name = "movies"/>
+        <br><br/>
+        Shooting Range: <input type = "checkbox" name = "range"/>
+        <br><br/>
+        Bars: <input type = "checkbox" name = "bars"/>
+        <br><br/>
+        <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();"/>
     </div>
-
 </section>
 <section id="contact">
     <h1>Contact</h1>

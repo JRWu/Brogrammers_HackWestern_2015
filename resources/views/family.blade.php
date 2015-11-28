@@ -52,38 +52,36 @@
     <form align = "center">
     <h1>Family</h1>
         Check all that apply:
-        <br></br>
-        Tennis/Badminton: <input type = "checkbox" name = "Tennis" >
-        <br></br>
-        Snowboarding/Skiing: <input type = "checkbox" name = "Skiing">
-        <br></br>
-        Amusement Park: <input type = "checkbox" name = "Park">
-        <br></br>
-        Camping: <input type = "checkbox" name = "Camping">
-        <br></br>
-        Pool: <input type = "checkbox" name = "Pool">
-        <br></br>
-        Beach: <input type = "checkbox" name = "Beach">
-        <br></br>
-        Movies/Drive-in: <input type = "checkbox" name = "Movies">
-        <br></br>
-        Concert: <input type = "checkbox" name = "Sushi">
-        <br></br>
-        Laser Tag: <input type = "checkbox" name = "Laser">
-        <br></br>
-        Sushi: <input type = "checkbox" name = "Sushi">
-        <br></br>
-        Boating/Water Sports: <input type = "checkbox" name = "Boat">
-        <br></br>
-        Mini Put: <input type = "checkbox" name = "Golf">
-        <br></br>
-        Mesuem: <input type = "checkbox" name = "Museum">
-        <br></br>
-        Family Restaurants: <input type = "checkbox" name = "Restaurant">
-        <br></br>
-        Max Radius (in KMs): <input type = "number" name ="radius">
-        <br></br>
-        <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();">
+        <br><br/>
+        Tennis/Badminton: <input type = "checkbox" name = "tennis"/>
+        <br><br/>
+        Snowboarding/Skiing: <input type = "checkbox" name = "skiing"/>
+        <br><br/>
+        Amusement Park: <input type = "checkbox" name = "park"/>
+        <br><br/>
+        Camping: <input type = "checkbox" name = "camping"/>
+        <br><br/>
+        Pool: <input type = "checkbox" name = "pool"/>
+        <br><br/>
+        Beach: <input type = "checkbox" name = "beach"/>
+        <br><br/>
+        Movies/Drive-in: <input type = "checkbox" name = "movies"/>
+        <br><br/>
+        Concert: <input type = "checkbox" name = "sushi"/>
+        <br><br/>
+        Laser Tag: <input type = "checkbox" name = "laser"/>
+        <br><br/>
+        Sushi: <input type = "checkbox" name = "sushi"/>
+        <br><br/>
+        Boating/Water Sports: <input type = "checkbox" name = "boat"/>
+        <br><br/>
+        Mini Put: <input type = "checkbox" name = "golf"/>
+        <br><br/>
+        Museum: <input type = "checkbox" name = "museum"/>
+        <br><br/>
+        Family Restaurants: <input type = "checkbox" name = "restaurant"/>
+        <br><br/>
+        <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();"/>
     </form>
 </section>
 <section id="contact">
