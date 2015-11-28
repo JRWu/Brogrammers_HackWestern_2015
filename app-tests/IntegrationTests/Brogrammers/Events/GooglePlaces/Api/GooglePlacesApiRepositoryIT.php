@@ -30,7 +30,15 @@ class GooglePlacesApiRepositoryIT extends TestCase
      */
     public function it_gets_places_near_a_location()
     {
-        $result = $this->apiRepository->getPlaces('42.9837, -81.2497', 'food');
+        $result = $this->apiRepository->getPlaces('42.9837, -81.2497', 'restaurant', 'fine');
+
+        $this->assertNotEmpty($result);
+    }
+
+    /** @test */
+    public function it_gets_place_details()
+    {
+        $result = $this->apiRepository->getPlaceDetails('ChIJsU9aYATyLogRuVJo26MCLkI');
 
         $this->assertNotEmpty($result);
     }

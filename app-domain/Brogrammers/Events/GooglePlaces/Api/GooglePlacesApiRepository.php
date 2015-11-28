@@ -12,7 +12,7 @@ use Brogrammers\Common\Api\AbstractApiRepository;
 
 class GooglePlacesApiRepository extends AbstractApiRepository
 {
-    const DEFAULT_PLACE_RADIUS = 500;
+    const DEFAULT_PLACE_RADIUS = 20000;
 
     public function __construct(GooglePlacesApiClient $apiClient)
     {
@@ -28,5 +28,12 @@ class GooglePlacesApiRepository extends AbstractApiRepository
         $request['name'] = $name;
 
         return $this->apiClient->getEvents(array_filter($request));
+    }
+
+    public function getPlaceDetails($placeid)
+    {
+        return $this->apiClient->getEventDetails([
+            'placeid' => $placeid
+        ]);
     }
 }

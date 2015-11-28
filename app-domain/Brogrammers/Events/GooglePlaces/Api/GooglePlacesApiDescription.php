@@ -40,7 +40,7 @@ class GooglePlacesApiDescription extends AbstractApiDescription
                             'required' => true
                         ],
                         'types'    => [
-                            'type'     => 'string',
+                            'type'     => ['string', 'array'],
                             'location' => 'query',
                             'required' => false
                         ],
@@ -48,6 +48,18 @@ class GooglePlacesApiDescription extends AbstractApiDescription
                             'type'     => 'string',
                             'location' => 'query',
                             'required' => false
+                        ],
+                    ]
+                ],
+                'getEventDetails' => [
+                    'httpMethod'    => 'GET',
+                    'uri'           => 'details/json',
+                    'responseModel' => 'JsonResponse',
+                    'parameters'    => [
+                        'placeid' => [
+                            'type'     => 'string',
+                            'location' => 'query',
+                            'required' => true
                         ],
                     ]
                 ],
