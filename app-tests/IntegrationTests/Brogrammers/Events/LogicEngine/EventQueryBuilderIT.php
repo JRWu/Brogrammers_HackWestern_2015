@@ -25,8 +25,8 @@ class EventQueryBuilderIT extends TestCase
         (
             "location" =>
                 [
-                    'Latitude' => 42.9966006,
-                    'Longitude' => -81.2779735
+                    'latitude' => 42.9966006,
+                    'longitude' => -81.2779735
                 ],
             "dateType" => "family",
             "categories" =>

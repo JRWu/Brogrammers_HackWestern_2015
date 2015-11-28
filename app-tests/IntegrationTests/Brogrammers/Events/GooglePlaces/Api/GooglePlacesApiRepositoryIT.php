@@ -14,7 +14,7 @@ use TestCase;
 class GooglePlacesApiRepositoryIT extends TestCase
 {
     /**
-     * @var GooglePlacesApiRepository
+     * @var GooglePlacesApiRepository7
      */
     private $apiRepository;
 
