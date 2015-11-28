@@ -155,6 +155,7 @@ return [
          */
         Brogrammers\Events\Eventful\Api\EventfulApiServiceProvider::class,
         Brogrammers\Events\GooglePlaces\Api\GooglePlacesApiServiceProvider::class,
+        Brogrammers\Events\LogicEngine\EventLogicEngineServiceProvider::class,
 
     ],
 

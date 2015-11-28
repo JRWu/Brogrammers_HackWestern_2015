@@ -11,7 +11,7 @@ namespace IntegrationTests\Brogrammers\Events\Eventful\Api;
 use Brogrammers\Events\Eventful\Api\EventfulApiRepository;
 use TestCase;
 
-class EventApiRepositoryIT extends TestCase
+class EventfulApiRepositoryIT extends TestCase
 {
     /**
      * @var EventfulApiRepository
@@ -30,7 +30,7 @@ class EventApiRepositoryIT extends TestCase
      */
     public function it_gets_events_by_keyword()
     {
-        $result = $this->apiRepository->getEvents('London, Canada, CAN, CA, Ontario');
+        $result = $this->apiRepository->getEvents('London, Canada, CAN, CA, Ontario, concert');
 
         $this->assertNotEmpty($result);
     }

@@ -8,8 +8,6 @@
 
 namespace Brogrammers\Events\Eventful\Api;
 
-
-use Brogrammers\Eventful\Api\EventfulApiAuthenticator;
 use Edmund\PhpApiClient\AbstractApiClient;
 
 class EventfulApiClient extends AbstractApiClient
