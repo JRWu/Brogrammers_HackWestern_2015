@@ -30,7 +30,17 @@ class EventApiRepositoryIT extends TestCase
      */
     public function it_gets_events_by_keyword()
     {
-        $result = $this->apiRepository->getEvents('london, ontario');
+        $result = $this->apiRepository->getEvents('London, Canada, CAN, CA, Ontario');
+
+        $this->assertNotEmpty($result);
+    }
+
+    /**
+     * @test
+     */
+    public function it_gets_venues_by_keyword()
+    {
+        $result = $this->apiRepository->getVenues('London, Ontario');
 
         $this->assertNotEmpty($result);
     }
