@@ -27,20 +27,20 @@
     </script>
     <script language = "javascript" type ="text/javascript">
         function getCheckedBoxes(chkboxName){
-            console.log('clal')
+            //console.log('clal')
             var checkboxes = document.getElementsByName(chkboxName);
-            console.log(checkboxes)
+            //console.log(checkboxes)
             var checkboxesChecked = [];
             // Loop over them all
             $('input[type="checkbox"]').each(function(){
-                console.log('looping')
+                //console.log('looping')
                 // stick to the checked ones onto an array
                 if(this.checked){
                    checkboxesChecked.push(1);
                 } else {
                     checkboxesChecked.push(0);
                 }
-                console.log(checkboxesChecked)
+                //console.log(checkboxesChecked)
             })
             // return the array if it is non-empty or null
             //return checkboxesChecked.length > 0 ? checkboxesChecked : null;
