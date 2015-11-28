@@ -6,13 +6,13 @@ hostname: brogrammers
 name: brogrammers
 provider: virtualbox
 
-authorize: ~/.ssh/id_rsa.pub
+authorize: C:\Users\Symon\.ssh\id_rsa.pub
 
 keys:
-    - ~/.ssh/id_rsa
+    - C:\Users\Symon\.ssh\id_rsa
 
 folders:
-    - map: ~/Development/Projects/php/Brogrammers_HackWestern_2015
+    - map: C:\Users\Symon\Desktop\Hacks\Brogrammers_HackWestern_2015
       to: /home/vagrant/brogrammers
 
 sites:

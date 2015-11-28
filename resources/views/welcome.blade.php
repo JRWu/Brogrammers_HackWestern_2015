@@ -1,45 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>Laravel</title>
+<head>
+    <meta charset="utf-8">
+    <title>Your Studio</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../styles/main.css"/>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    <!-- Internet Explorer HTML5 enabling code: -->
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+    <!-- JavaScript Includes -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+            });
+        });
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+    </script>
+</head>
+<body>
+<section id="home">
+    <h1>Welcome to the Design Studio</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, sint illum earum sunt repudiandae aperiam ad dignissimos. Libero, totam, mollitia numquam vero ipsa exercitationem quas placeat velit officiis autem architecto.</p>
+</section>
+<section id="portfolio">
+    <h1>Our Portfolio</h1>
+</section>
+<section id="contact">
+    <h1>Contact the Design Studio</h1>
+    <p><a href="#">Learn More</a></p>
+</section>
 
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
+<nav>
+    <ul>
+        <li><a href="#home" class="scroll">Home</a></li>
+        <li><a href="#portfolio" class="scroll">Portfolio</a></li>
+        <li><a href="#contact" class="scroll">Contact</a></li>
+    </ul>
+</nav>
+
+</body>
 </html>
