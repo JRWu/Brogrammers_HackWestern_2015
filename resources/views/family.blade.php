@@ -27,20 +27,20 @@
     </script>
     <script language = "javascript" type ="text/javascript">
         function getCheckedBoxes(chkboxName){
-            //console.log('clal')
+            console.log('clal')
             var checkboxes = document.getElementsByName(chkboxName);
-            //console.log(checkboxes)
+            console.log(checkboxes)
             var checkboxesChecked = [];
             // Loop over them all
             $('input[type="checkbox"]').each(function(){
-                //console.log('looping')
+                console.log('looping')
                 // stick to the checked ones onto an array
                 if(this.checked){
                    checkboxesChecked.push(1);
                 } else {
                     checkboxesChecked.push(0);
                 }
-                //console.log(checkboxesChecked)
+                console.log(checkboxesChecked)
             })
             // return the array if it is non-empty or null
             //return checkboxesChecked.length > 0 ? checkboxesChecked : null;
@@ -53,34 +53,30 @@
     <h1>Family</h1>
         Check all that apply:
         <br><br/>
-        Tennis/Badminton: <input type = "checkbox" name = "tennis"/>
-        <br><br/>
-        Snowboarding/Skiing: <input type = "checkbox" name = "skiing"/>
-        <br><br/>
+        <div id="leftSide">
         Amusement Park: <input type = "checkbox" name = "park"/>
         <br><br/>
         Camping: <input type = "checkbox" name = "camping"/>
         <br><br/>
         Pool: <input type = "checkbox" name = "pool"/>
         <br><br/>
-        Beach: <input type = "checkbox" name = "beach"/>
-        <br><br/>
         Movies/Drive-in: <input type = "checkbox" name = "movies"/>
         <br><br/>
         Concert: <input type = "checkbox" name = "sushi"/>
         <br><br/>
+        </div>
+        <div id="rightSide">
         Laser Tag: <input type = "checkbox" name = "laser"/>
         <br><br/>
         Sushi: <input type = "checkbox" name = "sushi"/>
         <br><br/>
-        Boating/Water Sports: <input type = "checkbox" name = "boat"/>
-        <br><br/>
-        Mini Put: <input type = "checkbox" name = "golf"/>
+        Golf: <input type = "checkbox" name = "golf"/>
         <br><br/>
         Museum: <input type = "checkbox" name = "museum"/>
         <br><br/>
-        Family Restaurants: <input type = "checkbox" name = "restaurant"/>
+        Restaurants: <input type = "checkbox" name = "restaurant"/>
         <br><br/>
+        </div>
         <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();"/>
     </form>
 </section>

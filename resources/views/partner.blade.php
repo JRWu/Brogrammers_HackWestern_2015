@@ -52,13 +52,9 @@
     <div align = "center">
         Check all that applies!!
         <br><br/>
-        Tennis/Badminton: <input type = "checkbox" name = "tennis" />
-        <br><br/>
-        Snowboarding/Skiing: <input type = "checkbox" name = "skiing"/>
-        <br><br/>
         Art Gallery: <input type = "checkbox" name = "gallery"/>
         <br><br/>
-        Fancy Restaurant/Fine Dining: <input type = "checkbox" name = "restaurant"/>
+        Restaurant: <input type = "checkbox" name = "restaurant"/>
         <br><br/>
         Amusement Park: <input type = "checkbox" name = "park"/>
         <br><br/>
@@ -70,21 +66,17 @@
         <br><br/>
         Pool <input type = "checkbox" name = "pool" />
         <br><br/>
-        Beach: <input type = "checkbox" name = "beach"/>
-        <br><br/>
-        Mini Put: <input type = "checkbox" name = "golf"/>
+        Golf: <input type = "checkbox" name = "golf"/>
         <br><br/>
         Concert: <input type = "checkbox" name = "concert"/>
         <br><br/>
         Sushi: <input type = "checkbox" name = "sushi"/>
         <br><br/>
-        Boating/Water Sports: <input type = "checkbox" name = "boat"/>
-        <br><br/>
         Laser Tag: <input type = "checkbox" name = "laser"/>
         <br><br/>
-        Movies/Drive-in <input type = "checkbox" name = "movies"/>
+        Movies/Drive-in: <input type = "checkbox" name = "movies"/>
         <br><br/>
-        Max Radius (in KMs): <input type = "number" name ="radius">
+        Spa: <input type = "checkbox" name = "spa"/>
         <br><br/>
         <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();"/>
     </div>

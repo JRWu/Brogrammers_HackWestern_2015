@@ -53,10 +53,6 @@
         <h1>Friend</h1>
         Check all that apply:
         <br><br/>
-        Tennis/Badminton: <input type = "checkbox" name = "tennis"/>
-        <br><br/>
-        Snowboarding/Skiing: <input type = "checkbox" name = "skiing"/>
-        <br><br/>
         Amusement Park: <input type = "checkbox" name = "park"/>
         <br><br/>
         Camping: <input type = "checkbox" name = "camping"/>
@@ -65,25 +61,21 @@
         <br><br/>
         Pool <input type = "checkbox" name = "pool"/>
         <br><br/>
-        Beach: <input type = "checkbox" name = "beach"/>
-        <br><br/>
-        Mini Put: <input type = "checkbox" name = "golf"/>
+        Golf: <input type = "checkbox" name = "golf"/>
         <br><br/>
         Concert: <input type = "checkbox" name = "concert"/>
         <br><br/>
         Sushi: <input type = "checkbox" name = "sushi"/>
         <br><br/>
-        Boating/Water Sports: <input type = "checkbox" name = "boat"/>
-        <br><br/>
         Laser Tag: <input type = "checkbox" name = "laser"/>
         <br><br/>
-        Paintball/Airsoft: <input type = "checkbox" name = "guns"/>
+        Paintball: <input type = "checkbox" name = "paintball"/>
         <br><br/>
         Movies/Drive-in <input type = "checkbox" name = "movies"/>
         <br><br/>
-        Shooting Range: <input type = "checkbox" name = "range"/>
-        <br><br/>
         Bars: <input type = "checkbox" name = "bars"/>
+        <br><br/>
+        Spa: <input type = "checkbox" name = "spa"/>
         <br><br/>
         <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();"/>
     </div>
