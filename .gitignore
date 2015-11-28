@@ -1,1 +1,14 @@
+# Composer
 vendor/
+
+# Application Storage
+storage/*.sqlite
+storage/debugbar/
+
+# IDE
+.idea/
+_ide_helper.php
+
+# Vagrant
+.cache/
+.vagrant/
