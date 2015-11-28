@@ -8,6 +8,8 @@
 
 namespace Brogrammers\Events\LogicEngine;
 
+use Exception;
+
 
 /**
  * Class EventQueryBuilder
@@ -15,6 +17,9 @@ namespace Brogrammers\Events\LogicEngine;
  */
 class EventQueryBuilder
 {
+    const DISTANCE = "distance";
+    const TYPE = "type";
+    const CATEGORY = 'category';
 
     /**
      * @var location describes how far the user is willing to travel for each activity
@@ -34,13 +39,31 @@ class EventQueryBuilder
 
     public function __construct(array $request)
     {
-        $this->location = $request["distance"];     // Fix the "lcoation" label based on what S and V give us
-        $this->requesttype = $request["type"];      // Depends on Fam/Friends/Partner
-        foreach($request['category'] as $category) {    // Loops through the incoming categories
+        $this->validateRequest($request);
+
+        $this->location = $request[self::DISTANCE];     // Fix the "lcoation" label based on what S and V give us
+        $this->requesttype = $request[self::TYPE];      // Depends on Fam/Friends/Partner
+        foreach ($request[self::CATEGORY] as $category) {    // Loops through the incoming categories
             $this->categories[] = $category;
         }
     }
 
+    private function validateRequest($request)
+    {
+        $expectedKeys = [
+            self::DISTANCE,
+            self::TYPE,
+            self::CATEGORY
+        ];
+
+        foreach ($expectedKeys as $key) {
+            if (!array_key_exists($key, $request) || empty($request[$key])) {
+                throw new Exception('Missing expected keys');
+            }
+        }
+    }
+
+    // checks t/f value of category
 
     public function buildQuery()
     {
@@ -56,7 +79,6 @@ class EventQueryBuilder
         return $query;
     }
 
-    // checks t/f value of category
     public function filterCategories()
     {
         $filteredCategories = [];
@@ -69,10 +91,4 @@ class EventQueryBuilder
 
         return $filteredCategories;
     }
-
-
-
-
-
-
 }
