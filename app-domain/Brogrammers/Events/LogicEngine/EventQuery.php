@@ -50,4 +50,5 @@ class EventQuery
     public $dateType;
     public $type;
     public $rank;
+    public $location;
 }

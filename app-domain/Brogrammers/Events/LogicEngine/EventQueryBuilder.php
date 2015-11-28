@@ -104,7 +104,8 @@ class EventQueryBuilder
         $eventQuery = new EventQuery();
         $eventQuery->dateType = $this->dateType;
         $eventQuery->category = $category;
-
+        $eventQuery->location = $this->location;
+        
         if (in_array($category, EventQuery::GOOGLE_TYPES)) {
             $eventQuery->type = EventQuery::GOOGLE_TYPE_QUERY;
         }
