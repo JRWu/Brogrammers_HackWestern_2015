@@ -32,7 +32,10 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, sint illum earum sunt repudiandae aperiam ad dignissimos. Libero, totam, mollitia numquam vero ipsa exercitationem quas placeat velit officiis autem architecto.</p>
 </section>
 <section id="plans">
-    <h1>Welcome to 1-800 Plans</h1>
+    <h1>Who are you going with?</h1>
+    <p><a href="#">Family</a></p>
+    <p><a href="#">Friend</a></p>
+    <p><a href="#">Partner</a></p>
 </section>
 <section id="contact">
     <h1>Who are you going with?</h1>
