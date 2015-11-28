@@ -5,7 +5,7 @@
     <title>1-800 Hotline Bling</title>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../styles/main.css"/>
+    <link rel="stylesheet" href="../styles/family.css"/>
 
     <!-- Internet Explorer HTML5 enabling code: -->
 
@@ -27,15 +27,9 @@
     </script>
 </head>
 <body>
-<section id="home">
-    <h1>About us</h1>
-    <p></p>
-</section>
 <section id="plans">
     <h1>Who are you going with?</h1>
-    <p><a href="{{ url('/family') }}">Family</a></p>
-    <p><a href="{{ url('/friends') }}">Friend</a></p>
-    <p><a href="{{ url('/partner') }}">Partner</a></p>
+    <p><a href="#">Family</a></p>
 </section>
 <section id="contact">
     <h1>Contact</h1>
@@ -68,7 +62,7 @@
 
 <nav>
     <ul>
-        <li><a href="#home" class="scroll">Home</a></li>
+        <li><a href="{{ url('/') }}">Home</a></li>
         <li><a href="#plans" class="scroll">Plans</a></li>
         <li><a href="#contact" class="scroll">Contact</a></li>
     </ul>
