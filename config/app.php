@@ -145,7 +145,16 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * IDE HELPER
+         */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        /*
+         * Events
+         */
+        Brogrammers\Events\Eventful\Api\EventfulApiServiceProvider::class,
+        Brogrammers\Events\GooglePlaces\Api\GooglePlacesApiServiceProvider::class,
 
     ],
 
