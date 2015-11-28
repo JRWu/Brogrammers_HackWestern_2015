@@ -18,8 +18,8 @@ use Exception;
 class EventQueryBuilder
 {
     const DISTANCE = "distance";
-    const TYPE = "type";
     const CATEGORIES = 'categories';
+    const DATE_TYPE = 'dateType';
 
     /**
      * @var location describes how far the user is willing to travel for each activity
@@ -27,9 +27,10 @@ class EventQueryBuilder
     protected $location;
 
     /**
-     * @var requesttype describes what class of activity was picked (Fam/Friends/Partners)
+     * @var dateType describes what class of activity was picked (Fam/Friends/Partners)
      */
-    protected $requesttype;
+    protected $dateType;
+
 
     /**
      * @var array is the set of T/F values for categories being selected for
@@ -41,8 +42,9 @@ class EventQueryBuilder
     {
         $this->validateRequest($request);
 
-        $this->location = $request[self::DISTANCE];     // Fix the "lcoation" label based on what S and V give us
-        $this->requesttype = $request[self::TYPE];      // Depends on Fam/Friends/Partner
+        $this->dateType = $request[self::DATE_TYPE];
+        $this->location = $request[self::DISTANCE];
+        // Fix the "lcoation" label based on what S and V give us
         foreach ($request[self::CATEGORIES] as $key => $category) {    // Loops through the incoming categories
             $this->categories[$key] = $category;
         }
@@ -51,14 +53,14 @@ class EventQueryBuilder
     private function validateRequest($request)
     {
         $expectedKeys = [
+            self::DATE_TYPE,
             self::DISTANCE,
-            self::TYPE,
             self::CATEGORIES
         ];
 
         foreach ($expectedKeys as $key) {
             if (!array_key_exists($key, $request) || empty($request[$key])) {
-                throw new Exception('Missing expected keys' . $key);
+                throw new Exception('Missing expected keys: ' . $key);
             }
         }
     }
@@ -67,25 +69,20 @@ class EventQueryBuilder
 
     public function buildQuery()
     {
-        $goodCategories = $this->filterCategories();    // creates array of t/f value of category
-
-
-        // this function called by EventLogicEngine
-        // generates string query from the array keys b/c they're already filtered
-
-        $queryKeys = array_keys($goodCategories);
-
-
-        return $queryKeys;
+        return $this->parseAndGenerateQueries($this->categories);
     }
 
-    public function filterCategories()
+    /**
+     * @return EventQuery[]
+     * @throws Exception
+     */
+    private function parseAndGenerateQueries()
     {
         $filteredCategories = [];
 
-        foreach ($this->categories as $key => $category) {
-            if ($category === true) {
-                $filteredCategories[$key] = $this->translateCategories($category);
+        foreach ($this->categories as $key => $value) {
+            if ($value === true) {
+                $filteredCategories[] = $this->translateCategories($key);
             }
         }
 
@@ -94,10 +91,26 @@ class EventQueryBuilder
 
     // This takes the activities and translates them to places
     // How to differentiate
-    public function translateCategories($category)
+    private function translateCategories($category)
     {
 
+        $eventQuery = new EventQuery();
+        $eventQuery->dateType = $this->dateType;
+        $eventQuery->category = $category;
 
+        if (in_array($category, EventQuery::GOOGLE_TYPES)) {
+            $eventQuery->type = EventQuery::GOOGLE_TYPE_QUERY;
+        }
+        elseif (in_array($category, EventQuery::EXTERNAL_TYPES)) {
+            $eventQuery->type = EventQuery::GOOGLE_NAME_QUERY;
+        }
+        elseif (in_array($category, EventQuery::EVENTFUL_TYPES)) {
+            $eventQuery->type = EventQuery::EVENTFUL;
+        } else {
+            throw new \Exception('Not a valid type');
+        }
+
+        return $eventQuery;
     }
 
 

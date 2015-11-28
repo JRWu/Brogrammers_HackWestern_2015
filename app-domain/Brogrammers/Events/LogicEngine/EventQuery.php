@@ -14,6 +14,10 @@ class EventQuery
     const RANK_1 = 0;
     const RANK_2 = 1;
 
+    const GOOGLE_TYPE_QUERY = 'google_type';
+    const GOOGLE_NAME_QUERY = 'google_name';
+    const EVENTFUL = 'eventful';
+
     const GOOGLE_TYPES = [
         'park',
         'campground',
@@ -42,6 +46,8 @@ class EventQuery
         'rave'
     ];
 
+    public $category;
+    public $dateType;
     public $type;
     public $rank;
 }

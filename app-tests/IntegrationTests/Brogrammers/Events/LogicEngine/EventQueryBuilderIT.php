@@ -24,22 +24,28 @@ class EventQueryBuilderIT extends TestCase
         $dummyArray = array
         (
             "distance" => "100",
-            "type" => "family",
+            "dateType" => "family",
             "categories" =>
                 [
-                    "tennis" => FALSE,
-                    "pool" => TRUE,
-                    "miniPutt" => FALSE,
-                    "winterSports" => FALSE,
-                    "beach" => TRUE,
-                    "concert" => FALSE,
-                    "movies" => FALSE,
-                    "sushi" => FALSE,
-                    "amusementPark" => FALSE,
-                    "famRestaurants" => TRUE,
-                    "waterSports" => FALSE,
-                    "camping" => FALSE,
-                    "museum" => FALSE
+                    'park' => FALSE,
+                    'campground'=> TRUE,
+                    'movie_theater'=> FALSE,
+                    'museum'=> FALSE,
+                    'restaurant'=> FALSE,
+                    'spa'=> FALSE,
+                    'cafe'=> FALSE,
+                    'park'=> FALSE,
+                    'art_gallery'=> FALSE,
+                    'amusement_park'=> FALSE,
+                    'bar'=> FALSE,
+                    'pool'=> FALSE,
+                    'sushi'=> TRUE,
+                    'laser'=> FALSE,
+                    'golf'=> FALSE,
+                    'paintball'=> FALSE,
+                    'concert'=> TRUE,
+                    'festival'=> FALSE,
+                    'rave'=> FALSE
                 ]
         );
 
