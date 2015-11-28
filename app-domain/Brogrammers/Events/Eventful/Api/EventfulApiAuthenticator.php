@@ -6,7 +6,7 @@
  * Time: 2:23 AM
  */
 
-namespace Brogrammers\Eventful\Api;
+namespace Brogrammers\Events\Eventful\Api;
 
 
 use Brogrammers\Events\Eventful\Api\EventfulApiClient;
