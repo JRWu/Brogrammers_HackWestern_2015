@@ -1,0 +1,76 @@
+# General
+alias c='clear'
+alias ..="cd .."
+alias ...="cd ../.."
+
+# Project
+alias app-clean="bash scripts/app-clean.sh"
+alias app-deploy="bash scripts/app-deploy.sh"
+alias app-docs="bash scripts/app-docs.sh"
+alias app-install="bash scripts/app-install.sh"
+
+# Behat
+alias be='vendor/bin/behat'
+alias behat='vendor/bin/behat'
+
+# Test Suites
+alias unit-tests="vendor/bin/phpspec run && vendor/bin/phpunit --testsuite unit_tests"
+alias integration-tests="vendor/bin/phpunit --testsuite integration_tests"
+alias functional-tests="vendor/bin/behat --suite=functional_tests"
+alias acceptance-tests="vendor/bin/behat --suite=acceptance_tests"
+alias all-tests="vendor/bin/phpspec run && vendor/bin/phpunit && vendor/bin/behat"
+
+# PHPUnit
+alias phpunit="vendor/bin/phpunit"
+
+# PHPSpec
+alias phpspec="vendor/bin/phpspec"
+
+# Git
+alias gc='git commit'
+alias gs='git status'
+alias ga='git add'
+
+# Virtual Machine
+alias hosts='sudo nano /etc/hosts'
+alias vm='homestead ssh'
+
+# Laravel-oriented
+alias art='php artisan'
+alias cda='composer dump-autoload -o'
+alias mc='php artisan make:controller'
+alias me='php artisan make:event'
+alias mmo='php artisan make:model'
+alias mm='php artisan make:migration:schema'
+alias mp='php artisan make:migration:pivot'
+alias ms='php artisan make:seed'
+alias mpr='php artisan make:provider'
+alias rl='php artisan route:list'
+alias cu='composer update'
+alias larafresh='composer dump-autoload && php artisan cache:clear && php artisan clear-compiled && php artisan optimize && php artisan migrate:refresh --seed'
+alias laraquick='composer dump-autoload && php artisan cache:clear && php artisan clear-compiled' #Same as above except without the db refresh
+alias larafull='rm -rf vendor && rm -rf node_modules && composer install && npm install && bower install && gulp && php artisan clear-compiled && php artisan optimize && php artisan migrate:refresh --seed'
+
+function serve() {
+    if [[ "$1" && "$2" ]]
+    then
+        sudo dos2unix /vagrant/scripts/serve.sh
+        sudo bash /vagrant/scripts/serve.sh "$1" "$2" 80
+    else
+        echo "Error: missing required parameters."
+        echo "Usage: "
+        echo "  serve domain path"
+    fi
+}
+
+function serve-hhvm() {
+    if [[ "$1" && "$2" ]]
+    then
+        sudo dos2unix /vagrant/scripts/serve-hhvm.sh
+        sudo bash /vagrant/scripts/serve-hhvm.sh "$1" "$2" 80
+    else
+        echo "Error: missing required parameters."
+        echo "Usage: "
+        echo "  serve-hhvm domain path"
+    fi
+}

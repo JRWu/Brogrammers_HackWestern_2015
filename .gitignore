@@ -1,6 +1,9 @@
 # Composer
 vendor/
 
+# Node
+node_modules/
+
 # Application Storage
 storage/*.sqlite
 storage/debugbar/
