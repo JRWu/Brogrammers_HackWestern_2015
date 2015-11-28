@@ -52,17 +52,17 @@
     <div align = "center">
         Check all that applies!!
         <br><br/>
-        Art Gallery: <input type = "checkbox" name = "gallery"/>
+        Art Gallery: <input type = "checkbox" name = "museum"/>
         <br><br/>
         Restaurant: <input type = "checkbox" name = "restaurant"/>
         <br><br/>
-        Amusement Park: <input type = "checkbox" name = "park"/>
+        Amusement Park: <input type = "checkbox" name = "amusement_park"/>
         <br><br/>
-        Camping: <input type = "checkbox" name = "camping"/>
+        Camping: <input type = "checkbox" name = "campground"/>
         <br><br/>
         Rave/Edm: <input type ="checkbox" name = "rave"/>
         <br><br/>
-        Bars: <input type = "checkbox" name = "bars"/>
+        Bars: <input type = "checkbox" name = "bar"/>
         <br><br/>
         Pool <input type = "checkbox" name = "pool" />
         <br><br/>
@@ -74,9 +74,11 @@
         <br><br/>
         Laser Tag: <input type = "checkbox" name = "laser"/>
         <br><br/>
-        Movies/Drive-in: <input type = "checkbox" name = "movies"/>
+        Movies/Drive-in: <input type = "checkbox" name = "movie_theater"/>
         <br><br/>
         Spa: <input type = "checkbox" name = "spa"/>
+        <br><br/>
+        Park: <input type = "checkbox" name = "park"/>
         <br><br/>
         <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();"/>
     </div>

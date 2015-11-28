@@ -54,15 +54,17 @@
         Check all that apply:
         <br><br/>
         <div id="leftSide">
-        Amusement Park: <input type = "checkbox" name = "park"/>
+        Amusement Park: <input type = "checkbox" name = "amusement_park"/>
         <br><br/>
-        Camping: <input type = "checkbox" name = "camping"/>
+        Camping: <input type = "checkbox" name = "campground"/>
         <br><br/>
         Pool: <input type = "checkbox" name = "pool"/>
         <br><br/>
-        Movies/Drive-in: <input type = "checkbox" name = "movies"/>
+        Movies/Drive-in: <input type = "checkbox" name = "movie_theater"/>
         <br><br/>
-        Concert: <input type = "checkbox" name = "sushi"/>
+        Concert: <input type = "checkbox" name = "concert"/>
+        <br><br/>
+        Park: <input type = "checkbox" name = "park"/>
         <br><br/>
         </div>
         <div id="rightSide">
@@ -75,6 +77,8 @@
         Museum: <input type = "checkbox" name = "museum"/>
         <br><br/>
         Restaurants: <input type = "checkbox" name = "restaurant"/>
+        <br><br/>
+        Cafe: <input type = "checkbox" name = "cafe"/>
         <br><br/>
         </div>
         <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();"/>

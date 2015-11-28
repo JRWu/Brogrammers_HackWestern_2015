@@ -53,9 +53,9 @@
         <h1>Friend</h1>
         Check all that apply:
         <br><br/>
-        Amusement Park: <input type = "checkbox" name = "park"/>
+        Amusement Park: <input type = "checkbox" name = "amusement_park"/>
         <br><br/>
-        Camping: <input type = "checkbox" name = "camping"/>
+        Camping: <input type = "checkbox" name = "campground"/>
         <br><br/>
         Rave/Edm: <input type ="checkbox" name = "rave"/>
         <br><br/>
@@ -71,11 +71,13 @@
         <br><br/>
         Paintball: <input type = "checkbox" name = "paintball"/>
         <br><br/>
-        Movies/Drive-in <input type = "checkbox" name = "movies"/>
+        Movies/Drive-in <input type = "checkbox" name = "movie_theater"/>
         <br><br/>
-        Bars: <input type = "checkbox" name = "bars"/>
+        Bars: <input type = "checkbox" name = "bar"/>
         <br><br/>
         Spa: <input type = "checkbox" name = "spa"/>
+        <br><br/>
+        Park: <input type = "checkbox" name = "park"/>
         <br><br/>
         <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();"/>
     </div>

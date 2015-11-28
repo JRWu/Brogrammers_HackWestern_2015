@@ -115,12 +115,19 @@ h1
     display: inline-block;
 }
 
-#contact p
+#contacts nav a:hover
+{
+    background-color: blue;
+}
+
+#contact li
 {
     padding-top: 2em;
     float: left;
     padding-left: 15%;
 }
+
+
 
 #contact td
 {
