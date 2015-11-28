@@ -6,9 +6,9 @@
  * Time: 2:55 AM
  */
 
-namespace IntegrationTests\Brogrammers\Eventful\Api;
+namespace IntegrationTests\Brogrammers\Events\Eventful\Api;
 
-use Brogrammers\Eventful\Api\EventfulApiRepository;
+use Brogrammers\Events\Eventful\Api\EventfulApiRepository;
 use TestCase;
 
 class EventApiRepositoryIT extends TestCase

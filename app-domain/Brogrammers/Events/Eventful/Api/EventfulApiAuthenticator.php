@@ -9,6 +9,7 @@
 namespace Brogrammers\Eventful\Api;
 
 
+use Brogrammers\Events\Eventful\Api\EventfulApiClient;
 use Edmund\PhpApiClient\Auth\AbstractAuthenticator;
 use GuzzleHttp\Event\BeforeEvent;
 use GuzzleHttp\Message\Request;

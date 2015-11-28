@@ -6,9 +6,10 @@
  * Time: 2:20 AM
  */
 
-namespace Brogrammers\Eventful\Api;
+namespace Brogrammers\Events\Eventful\Api;
 
 
+use Brogrammers\Eventful\Api\EventfulApiAuthenticator;
 use Edmund\PhpApiClient\AbstractApiClient;
 
 class EventfulApiClient extends AbstractApiClient

@@ -6,7 +6,7 @@
  * Time: 2:21 AM
  */
 
-namespace Brogrammers\Eventful\Api;
+namespace Brogrammers\Events\Eventful\Api;
 
 
 use Edmund\PhpApiClient\AbstractApiDescription;

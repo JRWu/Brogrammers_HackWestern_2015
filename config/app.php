@@ -153,7 +153,7 @@ return [
         /*
          * Eventful
          */
-        Brogrammers\Eventful\Api\EventfulApiServiceProvider::class,
+        Brogrammers\Events\Eventful\Api\EventfulApiServiceProvider::class,
 
     ],
 

@@ -6,7 +6,7 @@
  * Time: 2:56 AM
  */
 
-namespace Brogrammers\Eventful\Api;
+namespace Brogrammers\Events\Eventful\Api;
 
 
 use Illuminate\Support\ServiceProvider;

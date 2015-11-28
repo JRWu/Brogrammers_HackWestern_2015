@@ -6,7 +6,7 @@
  * Time: 2:59 AM
  */
 
-namespace Brogrammers\Eventful\Api;
+namespace Brogrammers\Events\Eventful\Api;
 
 use Brogrammers\Common\Api\AbstractApiRepository;
 
@@ -14,7 +14,7 @@ class EventfulApiRepository extends AbstractApiRepository
 {
     public function __construct(EventfulApiClient $apiClient)
     {
-        $this->apiClient = $apiClient;
+        parent::__construct($apiClient);
     }
 
     public function getEvents($keywords)
