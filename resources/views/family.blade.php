@@ -28,12 +28,32 @@
 </head>
 <body>
 <section id="plans">
-    <h1>Who are you going with?</h1>
-    <p><a href="#">Family</a></p>
+    <div align = "center">
+    <h1>Family</h1>
+        Check all that apply:
+        <br></br>
+        Tennis/Badminton: <input type = "checkbox" name = "Tennis" >
+        <br></br>
+        Snowboarding/Skiing: <input type = "checkbox" name = "Skiing">
+        <br></br>
+        Amusement Park: <input type = "checkbox" name = "Park">
+        <br></br>
+        Camping: <input type = "checkbox" name = "Camping">
+        <br></br>
+        Shooting Range: <input type = "checkbox" name = "Range">
+        <br></br>
+        Mesuem: <input type = "checkbox" name = "Museum">
+        <br></br>
+        Family Restaurants: <input type = "checkbox" name = "Restaurant">
+        <br></br>
+        Max Radius (in KMs): <input type = "number" name ="radius">
+        <br></br>
+        <input type = "submit" value = "Submit!">
+    </div>
 </section>
 <section id="contact">
     <h1>Contact</h1>
-    <table>
+    <table align = "center">
      <tr>
          <td>Edmund Luong</td>
          <td>Symon Luu</td>

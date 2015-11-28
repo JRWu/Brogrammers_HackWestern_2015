@@ -28,8 +28,26 @@
 </head>
 <body>
 <section id="plans">
-    <h1>Who are you going with?</h1>
-    <p><a href="#">Partner</a></p>
+    <div align = "center">
+        <h1>Partner</h1>
+        Check all that apply:
+        <br></br>
+        Mini Put: <input type = "checkbox" name = "Golf" >
+        <br></br>
+        Concert: <input type = "checkbox" name = "Concert">
+        <br></br>
+        Sushi: <input type = "checkbox" name = "Sushi">
+        <br></br>
+        Boating/Water Sports: <input type = "checkbox" name = "Boat">
+        <br></br>
+        PaintBall/Airsoft: <input type = "checkbox" name = "Guns">
+        <br></br>
+        Laser Tag: <input type = "checkbox" name = "Laser Tag">
+        <br></br>
+        Max Radius (in KMs): <input type = "number" name ="radius">
+        <br></br>
+        <input type = "submit" value = "Submit!">
+    </div>
 </section>
 <section id="contact">
     <h1>Contact</h1>
