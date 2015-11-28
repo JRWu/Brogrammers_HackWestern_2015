@@ -34,6 +34,9 @@ class EventQueryBuilder
 
     public function __construct(array $request)
     {
+        // have function that checks validity of array
+        $this->validateRequest($request);
+
         $this->location = $request["distance"];     // Fix the "lcoation" label based on what S and V give us
         $this->requesttype = $request["type"];      // Depends on Fam/Friends/Partner
         foreach($request['category'] as $category) {    // Loops through the incoming categories
@@ -53,7 +56,7 @@ class EventQueryBuilder
         $queryKeys = array_keys($goodCategories);
 
 
-        return $query;
+        return $queryKeys;
     }
 
     // checks t/f value of category
@@ -69,10 +72,5 @@ class EventQueryBuilder
 
         return $filteredCategories;
     }
-
-
-
-
-
 
 }
