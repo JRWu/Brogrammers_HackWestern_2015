@@ -35,8 +35,10 @@
     <h1>Welcome to 1-800 Plans</h1>
 </section>
 <section id="contact">
-    <h1>Contact the Design Studio</h1>
-    <p><a href="#">Learn More</a></p>
+    <h1>Who are you going with?</h1>
+    <p><a href="#">Family</a></p>
+    <p><a href="#">Friend</a></p>
+    <p><a href="#">Partner</a></p>
 </section>
 
 <nav>
