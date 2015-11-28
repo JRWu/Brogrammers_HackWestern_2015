@@ -38,10 +38,32 @@
     <p><a href="#">Partner</a></p>
 </section>
 <section id="contact">
-    <h1>Who are you going with?</h1>
-    <p><a href="#">Family</a></p>
-    <p><a href="#">Friend</a></p>
-    <p><a href="#">Partner</a></p>
+    <h1>Contact</h1>
+    <table>
+     <tr>
+         <td>Edmund Luong</td>
+         <td>Symon Luu</td>
+         <td>Valmir Verbani</td>
+         <td>Jerry Wu</td>
+     </tr>
+     <tr>
+         <td>Western University</td>
+         <td>Fanshawe College</td>
+         <td>Western University</td>
+         <td>Western University</td>
+     </tr>
+     <tr>
+         <td>eluong3 at uwo dot ca</td>
+         <td>s_luu at fanshaweonline dot ca</td>
+         <td>jwu424 at uwo dot ca</td>
+         <td>vverbani at uwo dot ca</td>
+     </tr>
+         <td>Computer Science</td>
+         <td>Web Development</td>
+         <td>Computer Science</td>
+         <td>Computer Science</td>
+     </table>
+    <p> &copy; 2015, Inc - All Rights Reserved</p>
 </section>
 
 <nav>
