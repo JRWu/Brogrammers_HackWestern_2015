@@ -151,9 +151,10 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         /*
-         * Eventful
+         * Events
          */
         Brogrammers\Events\Eventful\Api\EventfulApiServiceProvider::class,
+        Brogrammers\Events\GooglePlaces\Api\GooglePlacesApiServiceProvider::class,
 
     ],
 
