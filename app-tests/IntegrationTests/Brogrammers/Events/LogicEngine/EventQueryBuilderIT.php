@@ -23,7 +23,11 @@ class EventQueryBuilderIT extends TestCase
 
         $dummyArray = array
         (
-            "distance" => "100",
+            "location" =>
+                [
+                    'Latitude' => 42.9966006,
+                    'Longitude' => -81.2779735
+                ],
             "dateType" => "family",
             "categories" =>
                 [

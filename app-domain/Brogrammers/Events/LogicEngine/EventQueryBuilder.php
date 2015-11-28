@@ -17,14 +17,14 @@ use Exception;
  */
 class EventQueryBuilder
 {
-    const DISTANCE = "distance";
+    const LOCATION = "location";
     const CATEGORIES = 'categories';
     const DATE_TYPE = 'dateType';
 
     /**
      * @var location describes how far the user is willing to travel for each activity
      */
-    protected $location;
+    protected $location = [];
 
     /**
      * @var dateType describes what class of activity was picked (Fam/Friends/Partners)
@@ -38,13 +38,14 @@ class EventQueryBuilder
     protected $categories = [];
 
 
+
     public function __construct(array $request)
     {
         $this->validateRequest($request);
 
         $this->dateType = $request[self::DATE_TYPE];
-        $this->location = $request[self::DISTANCE];
-        // Fix the "lcoation" label based on what S and V give us
+        $this->location = $request[self::LOCATION];
+        // Fix the "location" label based on what S and V give us
         foreach ($request[self::CATEGORIES] as $key => $category) {    // Loops through the incoming categories
             $this->categories[$key] = $category;
         }
@@ -54,7 +55,7 @@ class EventQueryBuilder
     {
         $expectedKeys = [
             self::DATE_TYPE,
-            self::DISTANCE,
+            self::LOCATION,
             self::CATEGORIES
         ];
 
@@ -62,6 +63,12 @@ class EventQueryBuilder
             if (!array_key_exists($key, $request) || empty($request[$key])) {
                 throw new Exception('Missing expected keys: ' . $key);
             }
+        }
+
+        if(!array_key_exists("Latitude", $request[self::LOCATION]) ||
+            !array_key_exists("Longitude", $request[self::LOCATION]))
+        {
+            throw new Exception('Missing Coordinates: ' . $request[self::LOCATION]);
         }
     }
 
