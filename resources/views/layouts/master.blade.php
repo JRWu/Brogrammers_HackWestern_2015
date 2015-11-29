@@ -36,6 +36,9 @@
 
 <style>
     body{
-        background-color: #E9EAED;
+        background-image: url('../img/back2.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 0;
     }
 </style>
