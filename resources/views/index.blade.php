@@ -123,7 +123,7 @@
         </div>
     </div>
     <div>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Need help...?</a>
+        <a href="https://goo.gl/OkuOMI">Need help...?</a>
     </div>
 </header>
 
