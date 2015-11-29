@@ -13,7 +13,12 @@
     </head>
 
     <body>
+<<<<<<< HEAD
         <div class = "container" >
+=======
+    <!-- Main page, 3 -->
+        <div class = "container" id = "firstbackground">
+>>>>>>> 34eae76a48315c4c7c8fa6f861303a657e2f7edf
             <div class = "text-center">
                 <h1>Plan A Date</h1>
                 <p><a href="{{ url('/family') }}">Family</a></p>
