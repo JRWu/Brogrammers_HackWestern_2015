@@ -17,12 +17,13 @@ class EventfulApiRepository extends AbstractApiRepository
         parent::__construct($apiClient);
     }
 
-    public function getEvents($location, $keywords)
+    public function getEvents($location, $within, $keywords=null)
     {
-        return $this->apiClient->getEvents([
+        return $this->apiClient->getEvents(array_filter([
             'location' => $location,
+            'within' => $within,
             'keywords' => $keywords
-        ]);
+        ]));
     }
 
     public function getVenues($keywords)

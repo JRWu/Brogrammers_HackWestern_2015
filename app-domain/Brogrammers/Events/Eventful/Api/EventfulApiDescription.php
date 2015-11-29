@@ -39,6 +39,12 @@ class EventfulApiDescription extends AbstractApiDescription
                             'location' => 'query',
                             'required' => false
                         ],
+                        'within' => [
+                            'type'     => 'string',
+                            'location' => 'query',
+                            'required' => false
+                        ],
+
                     ]
                 ],
                 'getVenues' => [
