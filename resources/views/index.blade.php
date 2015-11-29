@@ -50,8 +50,8 @@
                     <div class="col-md-12" style="background-color: transparent; margin-top: 10em;">
                         <div class="col-md-6">
                             <div>
-                                {!! Form::label('amusement_park', 'Amusement Park') !!}
-                                {!! Form::checkbox('amusement_park') !!}
+                                {!! Form::label('restaurant', 'Restaurants') !!}
+                                {!! Form::checkbox('restaurant') !!}
                             </div>
                             <div>
                                 {!! Form::label('campground', 'Camping') !!}
@@ -66,7 +66,7 @@
                                 {!! Form::checkbox('pool') !!}
                             </div>
                             <div>
-                                {!! Form::label('movie_theater', 'Movies / Drive-in') !!}
+                                {!! Form::label('movie_theater', 'Movies/Drive-in') !!}
                                 {!! Form::checkbox('movie_theater') !!}
                             </div>
                             <div>
@@ -76,6 +76,10 @@
                             <div>
                                 {!! Form::label('park', 'Park') !!}
                                 {!! Form::checkbox('park') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('rave', 'Raves/EDM') !!}
+                                {!! Form::checkbox('rave') !!}
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -92,8 +96,8 @@
                                 {!! Form::checkbox('museum') !!}
                             </div>
                             <div>
-                                {!! Form::label('restaurant', 'Restaurants') !!}
-                                {!! Form::checkbox('restaurant') !!}
+                                {!! Form::label('amusement_park', 'Amusement Park') !!}
+                                {!! Form::checkbox('amusement_park') !!}
                             </div>
                             <div>
                                 {!! Form::label('cafe', 'Cafes') !!}
@@ -104,8 +108,12 @@
                                 {!! Form::checkbox('spa') !!}
                             </div>
                             <div>
-                                {!! Form::label('park', 'Park') !!}
-                                {!! Form::checkbox('park') !!}
+                                {!! Form::label('festival', 'Festivals') !!}
+                                {!! Form::checkbox('festival') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('art_gallery', 'Art Galleries') !!}
+                                {!! Form::checkbox('art_gallery') !!}
                             </div>
                         </div>
                     </div>
