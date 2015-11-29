@@ -12,7 +12,7 @@
     <title>Date-Mate</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dm-bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
@@ -30,39 +30,9 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-<!-- Navigation -->
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
-                <i class="fa"></i> <span class="light">Home</span>
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-            <ul class="nav navbar-nav">
-                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                <li class="hidden">
-                    <a href="#page-top"></a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#about">About</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
 
 <!-- Intro Header -->
 <header class="intro">
@@ -71,51 +41,92 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h1 class="brand-heading">Date-Mate</h1>
-                    <form>
-                        <input type="text" name="search" style="width: 40em; height: 3em;"
-                               placeholder="Search for location..." class="search"></br></br>
-                        <input type="submit" value="Search" class="btn btn-default btn-lg"></a>
-                    </form>
+                    {!! Form::open(['url' => '/results', 'method' => 'POST'])  !!}
+
+                    {!! Form::text('location', null, ['style' => 'color: black; width: 40em; height: 3em;', 'placeholder' => 'SEARCH FOR LOCATION...']) !!}
+
+                    {!! Form::submit('Search', ['class' => 'btn btn-default', 'style' => 'height:2.9em;']) !!}
+
+                    <div class="col-md-12" style="background-color: transparent; margin-top: 10em;">
+                        <div class="col-md-6">
+                            <div>
+                                {!! Form::label('amusement_park', 'Amusement Park') !!}
+                                {!! Form::checkbox('amusement_park') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('campground', 'Camping') !!}
+                                {!! Form::checkbox('campground') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('bar', 'Bars') !!}
+                                {!! Form::checkbox('bar') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('pool', 'Pools/Swimming') !!}
+                                {!! Form::checkbox('pool') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('movie_theater', 'Movies / Drive-in') !!}
+                                {!! Form::checkbox('movie_theater') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('concert', 'Concert') !!}
+                                {!! Form::checkbox('concert') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('park', 'Park') !!}
+                                {!! Form::checkbox('park') !!}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                {!! Form::label('sushi', 'Sushi') !!}
+                                {!! Form::checkbox('sushi') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('golf', 'Golf') !!}
+                                {!! Form::checkbox('golf') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('museum', 'Museums') !!}
+                                {!! Form::checkbox('museum') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('restaurant', 'Restaurants') !!}
+                                {!! Form::checkbox('restaurant') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('cafe', 'Cafes') !!}
+                                {!! Form::checkbox('cafe') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('spa', 'Spas') !!}
+                                {!! Form::checkbox('spa') !!}
+                            </div>
+                            <div>
+                                {!! Form::label('park', 'Park') !!}
+                                {!! Form::checkbox('park') !!}
+                            </div>
+                        </div>
+                    </div>
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- About Section -->
-<section id="about" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2>About Grayscale</h2>
-            <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply
-                download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview
-                    page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-            <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a
-                custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-            <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy
-                customization.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <div class="container text-center">
-        <p>Copyright &copy; Date-Mate 2015</p>
-    </div>
-</footer>
-
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="js/dm-jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="js/dm-bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
+<script src="js/dm-jquery.easing.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="js/grayscale.js"></script>
+<script src="js/dm-grayscale.js"></script>
 
 </body>
 
