@@ -1,53 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-
-    <title>Bootstrap</title>
+    <title>Watch Me Whip</title>
     <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
     <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel = "stylesheet">
-    <link href = "./css/styles.css" rel = "stylesheet">
+    <link href = "./css/friends.css" rel = "stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
     <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <!-- Internet Explorer HTML5 enabling code: -->
-
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- JavaScript Includes -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
     <script language = "javascript" type ="text/javascript">
-        function getCheckedBoxes(chkboxName){
-            //console.log('clal')
+        function getCheckedBoxes(chkboxName)
+        {
             var checkboxes = document.getElementsByName(chkboxName);
-            //console.log(checkboxes)
             var checkboxesChecked = [];
-            // Loop over them all
-            $('input[type="checkbox"]').each(function(){
-                //console.log('looping')
-                // stick to the checked ones onto an array
-                if(this.checked){
+            $('input[type="checkbox"]').each(function()
+            {
+                if(this.checked)
+                {
                     checkboxesChecked.push(1);
-                } else {
+                }
+                else
+                {
                     checkboxesChecked.push(0);
                 }
-                console.log(checkboxesChecked)
             })
-            // return the array if it is non-empty or null
-            //return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+            return checkboxesChecked.length > 0 ? checkboxesChecked : null;
         }
     </script>
 </head>
 <body>
 <div class = "container" align = "center">
-        <h1>Friend</h1>
+    <h1>Friend</h1>
+    <div class = "container" id="checkboxes">
         Check all that apply:
         <br><br/>
-        Amusement Park: <input type = "checkbox" name = "park"/>
+        Amusement Park: <input type = "checkbox" name = "amusement_park"/>
         <br><br/>
-        Camping: <input type = "checkbox" name = "camping"/>
+        Camping: <input type = "checkbox" name = "campground"/>
         <br><br/>
         Rave/Edm: <input type ="checkbox" name = "rave"/>
         <br><br/>
@@ -63,14 +53,16 @@
         <br><br/>
         Paintball: <input type = "checkbox" name = "paintball"/>
         <br><br/>
-        Movies/Drive-in <input type = "checkbox" name = "movies"/>
+        Movies/Drive-in <input type = "checkbox" name = "movie_theater"/>
         <br><br/>
-        Bars: <input type = "checkbox" name = "bars"/>
+        Bars: <input type = "checkbox" name = "bar"/>
         <br><br/>
         Spa: <input type = "checkbox" name = "spa"/>
         <br><br/>
+        Park: <input type = "checkbox" name = "park"/>
+        <br><br/>
         <input type = "submit" value = "Submit!" class = "btn btn-default"  onClick = "getCheckedBoxes();"/>
     </div>
-</form>
+</div>
 </body>
 </html>
