@@ -183,7 +183,9 @@ class EventLogicEngine
                     $result->description = $event['description'];
                     $result->venueName = $event['venue_name'];
                     $result->address = $event['venue_address'];
-                    $result->date = Carbon::parse($event['start_time'])->toRfc850String();
+                    if (!empty($event['start_time'])) {
+                        $result->date = Carbon::parse($event['start_time'])->toRfc850String();
+                    }
                     $result->url = $event['url'];
 
                     if (!empty($event['image']) && !empty($event['image']['small']) && !empty($event['image']['small']['url'])) {
@@ -200,10 +202,14 @@ class EventLogicEngine
 
     private function isValidEvent($event)
     {
-        $today = Carbon::now();
-        $oneWeekLater = Carbon::createFromTimestamp($today->getTimestamp())->addWeek();
-        $startDate = Carbon::createFromFormat('Y-m-d H:m:s', $event['start_time']);
+        if (!empty($event['start_time'])) {
+            $today = Carbon::now();
+            $oneWeekLater = Carbon::createFromTimestamp($today->getTimestamp())->addWeek();
+            $startDate = Carbon::createFromFormat('Y-m-d H:m:s', $event['start_time']);
 
-        return ($startDate->gte($today) && $startDate->lte($oneWeekLater));
+            return ($startDate->gte($today) && $startDate->lte($oneWeekLater));
+        }
+
+        return true;
     }
 }
