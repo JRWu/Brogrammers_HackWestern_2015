@@ -174,22 +174,24 @@ class EventLogicEngine
     {
         $results = [];
 
-        foreach ($response['events']['event'] as $event) {
-            if ($this->isValidEvent($event)) {
-                $result = new EventResult();
-                $result->apiType = 'eventful';
-                $result->placeName = $event['title'];
-                $result->description = $event['description'];
-                $result->venueName = $event['venue_name'];
-                $result->address = $event['venue_address'];
-                $result->date = Carbon::parse($event['start_time'])->toRfc850String();
-                $result->url = $event['url'];
+        if (!empty($response['events'])) {
+            foreach ($response['events']['event'] as $event) {
+                if ($this->isValidEvent($event)) {
+                    $result = new EventResult();
+                    $result->apiType = 'eventful';
+                    $result->placeName = $event['title'];
+                    $result->description = $event['description'];
+                    $result->venueName = $event['venue_name'];
+                    $result->address = $event['venue_address'];
+                    $result->date = Carbon::parse($event['start_time'])->toRfc850String();
+                    $result->url = $event['url'];
 
-                if (!empty($event['image']) && !empty($event['image']['small']) && !empty($event['image']['small']['url'])) {
-                    $result->image = $event['image']['small']['url'];
+                    if (!empty($event['image']) && !empty($event['image']['small']) && !empty($event['image']['small']['url'])) {
+                        $result->image = $event['image']['small']['url'];
+                    }
+
+                    $results[] = $result;
                 }
-
-                $results[] = $result;
             }
         }
 
