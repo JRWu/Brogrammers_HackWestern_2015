@@ -33,3 +33,9 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
+<style>
+    body{
+        background-color: #E9EAED;
+    }
+</style>

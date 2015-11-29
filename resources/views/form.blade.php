@@ -7,6 +7,8 @@
 
     {!! Form::hidden('dateType', 'family') !!}
 
+    {!! Form::checkbox('restaurant', 1, true) !!}
+
     {!! Form::submit('Submit') !!}
 
     {!! Form::close() !!}
