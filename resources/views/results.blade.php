@@ -34,6 +34,11 @@
                             @endif</td>
                         <td>@if(!empty($event->address)) Address: {!! $event->address !!} <br><br>@endif
                             @if(!empty($event->date)) Date: {!! $event->date  !!} <br><br>@endif
+                            @if($event->apiType == 'google' && !empty($event->openNow))
+                                Currently Open: @if($event->openNow == true) Yes @endif @if($event->openNow == false)
+                                    No @endif
+                                <br><br>
+                            @endif
                             @if(!empty($event->description)) {!! $event->description  !!}@endif
                         </td>
                     </tr>
