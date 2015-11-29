@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+body {
+    font: 100% Raleway, sans-serif;
+    background-image: url('../img/back7.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0;
+}
+
+h1 {
+    font: 7.5em Oswald, sans-serif;
+    text-shadow: 1px 1px 1px #000;
+    color: #fff;
+    text-align: center;
+}
+
+a {
+    font-size: 4.3em;
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 2em; /* uses font size of element for padding and margin - so 1em padding = 16*2 or 32 */
+    text-decoration: none;
+    display: inline-block;
+}
+
+p {
+    padding-top: 17.5em;
+    float: left;
+    padding-left: 4.5%;
+}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body {
+    font: 100% Raleway, sans-serif;
+    background-image: url('../img/back1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    min-height: 100%;
+}
+
+h1 {
+    font: 7.5em Oswald, sans-serif;
+    text-shadow: 1px 1px 1px #000;
+    color: #fff;
+    text-align: center;
+}
+
+#checkboxes {
+    color: #fff;
+    font-size: 1.5em;
+    display: inline-block;
+    text-decoration: none;
+    padding: 2em;
+}
