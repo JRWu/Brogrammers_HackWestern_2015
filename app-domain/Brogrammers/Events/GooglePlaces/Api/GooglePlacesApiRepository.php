@@ -36,4 +36,22 @@ class GooglePlacesApiRepository extends AbstractApiRepository
             'placeid' => $placeid
         ]);
     }
+
+    public function getCoordinates($address, $components = null)
+    {
+        $response = $this->apiClient->getCoordinates(array_filter([
+            'address'    => $address,
+            'components' => $components
+        ]));
+
+        if (!empty($response)
+            && !empty($response['results'])
+            && !empty($response['results'][0]['geometry'])
+            && !empty($response['results'][0]['geometry']['location'])
+        ) {
+            return $response['results'][0]['geometry']['location'];
+        }
+
+        return null;
+    }
 }

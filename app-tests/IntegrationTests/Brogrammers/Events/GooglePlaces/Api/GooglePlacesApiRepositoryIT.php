@@ -14,7 +14,7 @@ use TestCase;
 class GooglePlacesApiRepositoryIT extends TestCase
 {
     /**
-     * @var GooglePlacesApiRepository7
+     * @var GooglePlacesApiRepository
      */
     private $apiRepository;
 
@@ -39,6 +39,14 @@ class GooglePlacesApiRepositoryIT extends TestCase
     public function it_gets_place_details()
     {
         $result = $this->apiRepository->getPlaceDetails('ChIJsU9aYATyLogRuVJo26MCLkI');
+
+        $this->assertNotEmpty($result);
+    }
+
+    /** @test */
+    public function it_gets_coordinates_from_search()
+    {
+        $result = $this->apiRepository->getCoordinates('London, ON');
 
         $this->assertNotEmpty($result);
     }

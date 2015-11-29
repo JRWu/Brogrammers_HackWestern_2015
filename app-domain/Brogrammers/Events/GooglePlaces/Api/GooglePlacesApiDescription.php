@@ -22,11 +22,11 @@ class GooglePlacesApiDescription extends AbstractApiDescription
     {
         return new static([
             'additionalProperties' => true,
-            'baseUrl'              => 'https://maps.googleapis.com/maps/api/place/',
+            'baseUrl'              => 'https://maps.googleapis.com/maps/api/',
             'operations'           => [
-                'getEvents' => [
+                'getEvents'       => [
                     'httpMethod'    => 'GET',
-                    'uri'           => 'nearbysearch/json',
+                    'uri'           => 'place/nearbysearch/json',
                     'responseModel' => 'JsonResponse',
                     'parameters'    => [
                         'location' => [
@@ -53,7 +53,7 @@ class GooglePlacesApiDescription extends AbstractApiDescription
                 ],
                 'getEventDetails' => [
                     'httpMethod'    => 'GET',
-                    'uri'           => 'details/json',
+                    'uri'           => 'place/details/json',
                     'responseModel' => 'JsonResponse',
                     'parameters'    => [
                         'placeid' => [
@@ -63,6 +63,23 @@ class GooglePlacesApiDescription extends AbstractApiDescription
                         ],
                     ]
                 ],
+                'getCoordinates'  => [
+                    'httpMethod'    => 'GET',
+                    'uri'           => 'geocode/json',
+                    'responseModel' => 'JsonResponse',
+                    'parameters'    => [
+                        'address'    => [
+                            'type'     => 'string',
+                            'location' => 'query',
+                            'required' => true
+                        ],
+                        'components' => [
+                            'type'     => 'string',
+                            'location' => 'query',
+                            'required' => false
+                        ]
+                    ]
+                ]
             ],
             'models'               => [
                 'JsonResponse' => [
