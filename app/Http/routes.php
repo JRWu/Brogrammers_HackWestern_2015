@@ -26,3 +26,7 @@ Route::get('/friends', function () {
 Route::get('/partner', function () {
     return view('partner');
 });
+
+Route::get('/map', function () {
+    return view('map');
+});
