@@ -30,7 +30,7 @@ class EventfulApiRepositoryIT extends TestCase
      */
     public function it_gets_events_by_keyword()
     {
-        $result = $this->apiRepository->getEvents('London, Canada, CAN, CA, Ontario, concert');
+        $result = $this->apiRepository->getEvents('London, Ontario, Canada', 'concert');
 
         $this->assertNotEmpty($result);
     }

@@ -17,9 +17,10 @@ class EventfulApiRepository extends AbstractApiRepository
         parent::__construct($apiClient);
     }
 
-    public function getEvents($keywords)
+    public function getEvents($location, $keywords)
     {
         return $this->apiClient->getEvents([
+            'location' => $location,
             'keywords' => $keywords
         ]);
     }
