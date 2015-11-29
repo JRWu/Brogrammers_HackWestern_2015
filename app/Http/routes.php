@@ -26,3 +26,5 @@ Route::get('/friends', function () {
 Route::get('/partner', function () {
     return view('partner');
 });
+
+Route::post('/results', 'EventsController@getEvents');

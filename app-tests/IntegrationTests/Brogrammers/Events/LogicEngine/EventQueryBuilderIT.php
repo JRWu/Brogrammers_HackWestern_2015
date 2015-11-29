@@ -57,7 +57,6 @@ class EventQueryBuilderIT extends TestCase
         $query = $queryBuilder->buildQuery();
 
         $this->assertNotEmpty($query);
-
     }
 
 }

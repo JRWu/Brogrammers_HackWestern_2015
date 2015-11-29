@@ -76,7 +76,7 @@ class EventQueryBuilder
 
     public function buildQuery()
     {
-        return $this->parseAndGenerateQueries($this->categories);
+        return $this->parseAndGenerateQueries();
     }
 
     /**
@@ -100,7 +100,6 @@ class EventQueryBuilder
     // How to differentiate
     private function translateCategories($category)
     {
-
         $eventQuery = new EventQuery();
         $eventQuery->dateType = $this->dateType;
         $eventQuery->category = $category;
