@@ -6,8 +6,8 @@
     <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
     <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel = "stylesheet">
     <link href = "./css/styles.css" rel = "stylesheet">
-    <script href="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- Internet Explorer HTML5 enabling code: -->
 
@@ -33,7 +33,7 @@
                 } else {
                     checkboxesChecked.push(0);
                 }
-                //console.log(checkboxesChecked)
+                console.log(checkboxesChecked)
             })
             // return the array if it is non-empty or null
             //return checkboxesChecked.length > 0 ? checkboxesChecked : null;
@@ -41,8 +41,7 @@
     </script>
 </head>
 <body>
-<section id="plans">
-    <div align = "center">
+<div class = "container" align = "center">
         <h1>Friend</h1>
         Check all that apply:
         <br><br/>
@@ -70,33 +69,8 @@
         <br><br/>
         Spa: <input type = "checkbox" name = "spa"/>
         <br><br/>
-        <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();"/>
+        <input type = "submit" value = "Submit!" class = "btn btn-default"  onClick = "getCheckedBoxes();"/>
     </div>
-</section>
-<section id="contact">
-    <h1>Contact</h1>
-    <table align = "center">
-        <tr>
-            <td>Edmund Luong <br/> Western University <br/>
-                eluong3 (at) uwo (dot) ca <br/> Computer Science</td>
-            <td>Jerry Wu <br/> Western University <br/>
-                jwu424 (at) uwo (dot) ca <br/> Computer Science</td>
-            <td>Valmir Verbani <br/> Western University <br/>
-                vverbani (at) uwo (dot) ca <br/> Computer Science</td>
-            <td>Symon Luu <br/> Fanshawe College <br/>
-                s_luu (at) fanshaweonline (dot) ca <br/> Internet Web Development & Applications</td>
-        </tr>
-    </table>
-    &copy; 2015, Inc - All Rights Reserved
-</section>
-
-<nav>
-    <ul>
-        <li><a href="{{ url('/') }}">Home</a></li>
-        <li><a href="#plans" class="scroll">Plans</a></li>
-        <li><a href="#contact" class="scroll">Contact</a></li>
-    </ul>
-</nav>
-
+</form>
 </body>
 </html>

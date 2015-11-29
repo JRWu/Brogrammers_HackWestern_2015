@@ -1,30 +1,15 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>1-800 Hotline Bling</title>
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../styles/partner.css"/>
 
-    <!-- Internet Explorer HTML5 enabling code: -->
+    <title>Bootstrap</title>
+    <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
+    <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel = "stylesheet">
+    <link href = "./css/styles.css" rel = "stylesheet">
 
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- JavaScript Includes -->
+    <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
 
-            $(".scroll").click(function(event){
-                event.preventDefault();
-                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
-            });
-        });
-
-    </script>
     <script language = "javascript" type ="text/javascript">
         function getCheckedBoxes(chkboxName){
             //console.log('clal')
@@ -48,8 +33,9 @@
     </script>
 </head>
 <body>
-<section id="plans">
-    <div align = "center">
+
+<div class = "container" align = "center">
+        <h2>Partner</h2>
         Check all that applies!!
         <br><br/>
         Art Gallery: <input type = "checkbox" name = "gallery"/>
@@ -78,33 +64,8 @@
         <br><br/>
         Spa: <input type = "checkbox" name = "spa"/>
         <br><br/>
-        <input type = "submit" value = "Submit!" onClick = "getCheckedBoxes();"/>
+        <input type = "submit" value = "Submit!" class = "btn btn-default onClick = "getCheckedBoxes();"/>
     </div>
-</section>
-<section id="contact">
-    <h1>Contact</h1>
-    <table align = "center">
-        <tr>
-            <td>Edmund Luong <br/> Western University <br/>
-                eluong3 (at) uwo (dot) ca <br/> Computer Science</td>
-            <td>Jerry Wu <br/> Western University <br/>
-                jwu424 (at) uwo (dot) ca <br/> Computer Science</td>
-            <td>Valmir Verbani <br/> Western University <br/>
-                vverbani (at) uwo (dot) ca <br/> Computer Science</td>
-            <td>Symon Luu <br/> Fanshawe College <br/>
-                s_luu (at) fanshaweonline (dot) ca <br/> Internet Web Development & Applications</td>
-        </tr>
-    </table>
-    &copy; 2015, Inc - All Rights Reserved
-</section>
-
-<nav>
-    <ul>
-        <li><a href="{{ url('/') }}">Home</a></li>
-        <li><a href="#plans" class="scroll">Plans</a></li>
-        <li><a href="#contact" class="scroll">Contact</a></li>
-    </ul>
-</nav>
 
 </body>
 </html>

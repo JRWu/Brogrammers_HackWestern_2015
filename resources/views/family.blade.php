@@ -6,8 +6,9 @@
     <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
     <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel = "stylesheet">
     <link href = "./css/styles.css" rel = "stylesheet">
-    <script href="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
     <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <script language = "javascript" type ="text/javascript">
             function getCheckedBoxes(chkboxName){
@@ -17,7 +18,7 @@
                 var checkboxesChecked = [];
                 // Loop over them all
                 $('input[type="checkbox"]').each(function(){
-                    console.log('looping')
+                     console.log('looping')
                     // stick to the checked ones onto an array
                     if(this.checked){
                         checkboxesChecked.push(1);
@@ -27,7 +28,7 @@
                     console.log(checkboxesChecked)
                 })
                 // return the array if it is non-empty or null
-                //return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+                return checkboxesChecked.length > 0 ? checkboxesChecked : null;
             }
     </script>
 </head>
@@ -61,20 +62,5 @@
 
     </div>
 
-{{--<section id="contact">--}}
-    {{--<h1>Contact</h1>--}}
-    {{--<table align = "center">--}}
-        {{--<tr>--}}
-            {{--<td>Edmund Luong <br/> Western University <br/>--}}
-                {{--eluong3 (at) uwo (dot) ca <br/> Computer Science</td>--}}
-            {{--<td>Jerry Wu <br/> Western University <br/>--}}
-                {{--jwu424 (at) uwo (dot) ca <br/> Computer Science</td>--}}
-            {{--<td>Valmir Verbani <br/> Western University <br/>--}}
-                {{--vverbani (at) uwo (dot) ca <br/> Computer Science</td>--}}
-            {{--<td>Symon Luu <br/> Fanshawe College <br/>--}}
-                {{--s_luu (at) fanshaweonline (dot) ca <br/> Internet Web Development & Applications</td>--}}
-        {{--</tr>--}}
-    {{--</table>--}}
-    {{--&copy; 2015, Inc - All Rights Reserved--}}
 </body>
 </html>
