@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use Brogrammers\Events\GooglePlaces\Api\GooglePlacesApiRepository;
 use Brogrammers\Events\LogicEngine\EventLogicEngine;
 use Brogrammers\Events\LogicEngine\EventQuery;
 use Brogrammers\Events\LogicEngine\EventQueryBuilder;
@@ -15,9 +16,12 @@ class EventsController extends Controller
      */
     protected $logicEngine;
 
-    public function __construct(EventLogicEngine $logicEngine)
-    {
+    public function __construct(
+        EventLogicEngine $logicEngine,
+        GooglePlacesApiRepository $googlePlaces
+    ) {
         $this->logicEngine = $logicEngine;
+        $this->google = $googlePlaces;
     }
 
     /**
@@ -31,8 +35,6 @@ class EventsController extends Controller
         $query = (new EventQueryBuilder($input))->buildQuery();
         $results = $this->logicEngine->findEventsNearby($query);
 
-//        return $results;
-
         return view('results', ['events' => $results]);
     }
 
@@ -40,13 +42,7 @@ class EventsController extends Controller
     {
         $array = [];
 
-        $locationArray = explode(', ', $input['location']);
-
-        $array['location'] = [
-            'latitude'  => $locationArray[0],
-            'longitude' => $locationArray[1]
-        ];
-        $array['dateType'] = $input['dateType'];
+        $array['location'] = $this->google->getCoordinates($input['location']);
         $array['categories'] = [];
         foreach ($input as $key => $value) {
             if (in_array($key, EventQuery::GOOGLE_TYPES)

@@ -7,6 +7,10 @@
 
     {!! Form::hidden('dateType', 'family') !!}
 
+    {!! Form::text('location', 'london') !!}
+
+    {!! Form::checkbox('restaurant', 1, true) !!}
+
     {!! Form::submit('Submit') !!}
 
     {!! Form::close() !!}

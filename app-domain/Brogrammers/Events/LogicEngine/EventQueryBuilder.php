@@ -43,7 +43,7 @@ class EventQueryBuilder
     {
         $this->validateRequest($request);
 
-        $this->dateType = $request[self::DATE_TYPE];
+        $this->dateType = 'type';
         $this->location = $request[self::LOCATION];
         // Fix the "location" label based on what S and V give us
         foreach ($request[self::CATEGORIES] as $key => $category) {    // Loops through the incoming categories
@@ -54,7 +54,6 @@ class EventQueryBuilder
     private function validateRequest($request)
     {
         $expectedKeys = [
-            self::DATE_TYPE,
             self::LOCATION,
             self::CATEGORIES
         ];

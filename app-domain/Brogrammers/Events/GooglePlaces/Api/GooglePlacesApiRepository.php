@@ -49,7 +49,13 @@ class GooglePlacesApiRepository extends AbstractApiRepository
             && !empty($response['results'][0]['geometry'])
             && !empty($response['results'][0]['geometry']['location'])
         ) {
-            return $response['results'][0]['geometry']['location'];
+            $location = $response['results'][0]['geometry']['location'];
+
+            $coordinates = [];
+            $coordinates['latitude'] = $location['lat'];
+            $coordinates['longitude'] = $location['lng'];
+
+            return $coordinates;
         }
 
         return null;
