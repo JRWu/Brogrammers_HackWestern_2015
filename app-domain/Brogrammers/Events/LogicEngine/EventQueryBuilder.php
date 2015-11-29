@@ -88,7 +88,7 @@ class EventQueryBuilder
         $filteredCategories = [];
 
         foreach ($this->categories as $key => $value) {
-            if ($value === true) {
+            if ((boolean)$value === true) {
                 $filteredCategories[] = $this->translateCategories($key);
             }
         }
