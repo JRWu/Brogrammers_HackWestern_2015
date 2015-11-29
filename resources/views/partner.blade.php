@@ -34,7 +34,7 @@
 </head>
 <body>
 
-<div class = "container" align = "center">
+<div class = "container">
         <h2>Partner</h2>
         Check all that applies!!
         <br><br/>
@@ -64,7 +64,7 @@
         <br><br/>
         Spa: <input type = "checkbox" name = "spa"/>
         <br><br/>
-        <input type = "submit" value = "Submit!" class = "btn btn-default onClick = "getCheckedBoxes();"/>
+        <input type = "submit" value = "Submit!" class = "btn btn-default" onClick = "getCheckedBoxes();"/>
     </div>
 
 </body>
