@@ -43,77 +43,77 @@
                     <h1 class="brand-heading">Date-Mate</h1>
                     {!! Form::open(['url' => '/results', 'method' => 'POST'])  !!}
 
-                    {!! Form::text('location', null, ['style' => 'color: black; width: 40em; height: 3em;', 'placeholder' => 'SEARCH FOR LOCATION...']) !!}
+                    {!! Form::text('location', null, ['style' => 'color: black; width: 40em; height: 3em; text-align: center', 'placeholder' => 'SEARCH FOR LOCATION...']) !!}
 
                     {!! Form::submit('Search', ['class' => 'btn btn-default', 'style' => 'height:2.9em;']) !!}
 
                     <div class="col-md-12" style="background-color: transparent; margin-top: 10em;">
                         <div class="col-md-6">
                             <div>
-                                {!! Form::label('restaurant', 'Restaurants') !!}
                                 {!! Form::checkbox('restaurant') !!}
+                                {!! Form::label('restaurant', 'Restaurants') !!}
                             </div>
                             <div>
-                                {!! Form::label('campground', 'Camping') !!}
                                 {!! Form::checkbox('campground') !!}
+                                {!! Form::label('campground', 'Camping') !!}
                             </div>
                             <div>
-                                {!! Form::label('bar', 'Bars') !!}
                                 {!! Form::checkbox('bar') !!}
+                                {!! Form::label('bar', 'Bars') !!}
                             </div>
                             <div>
-                                {!! Form::label('pool', 'Pools/Swimming') !!}
                                 {!! Form::checkbox('pool') !!}
+                                {!! Form::label('pool', 'Pools/Swimming') !!}
                             </div>
                             <div>
-                                {!! Form::label('movie_theater', 'Movies/Drive-in') !!}
                                 {!! Form::checkbox('movie_theater') !!}
+                                {!! Form::label('movie_theater', 'Movies/Drive-in') !!}
                             </div>
                             <div>
-                                {!! Form::label('concert', 'Concert') !!}
                                 {!! Form::checkbox('concert') !!}
+                                {!! Form::label('concert', 'Concert') !!}
                             </div>
                             <div>
-                                {!! Form::label('park', 'Park') !!}
                                 {!! Form::checkbox('park') !!}
+                                {!! Form::label('park', 'Park') !!}
                             </div>
                             <div>
-                                {!! Form::label('rave', 'Raves/EDM') !!}
                                 {!! Form::checkbox('rave') !!}
+                                {!! Form::label('rave', 'Raves/EDM') !!}
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div>
-                                {!! Form::label('sushi', 'Sushi') !!}
                                 {!! Form::checkbox('sushi') !!}
+                                {!! Form::label('sushi', 'Sushi') !!}
                             </div>
                             <div>
-                                {!! Form::label('golf', 'Golf') !!}
                                 {!! Form::checkbox('golf') !!}
+                                {!! Form::label('golf', 'Golf') !!}
                             </div>
                             <div>
-                                {!! Form::label('museum', 'Museums') !!}
                                 {!! Form::checkbox('museum') !!}
+                                {!! Form::label('museum', 'Museums') !!}
                             </div>
                             <div>
-                                {!! Form::label('amusement_park', 'Amusement Park') !!}
                                 {!! Form::checkbox('amusement_park') !!}
+                                {!! Form::label('amusement_park', 'Amusement Park') !!}
                             </div>
                             <div>
-                                {!! Form::label('cafe', 'Cafes') !!}
                                 {!! Form::checkbox('cafe') !!}
+                                {!! Form::label('cafe', 'Cafes') !!}
                             </div>
                             <div>
-                                {!! Form::label('spa', 'Spas') !!}
                                 {!! Form::checkbox('spa') !!}
+                                {!! Form::label('spa', 'Spas') !!}
                             </div>
                             <div>
-                                {!! Form::label('festival', 'Festivals') !!}
                                 {!! Form::checkbox('festival') !!}
+                                {!! Form::label('festival', 'Festivals') !!}
                             </div>
                             <div>
-                                {!! Form::label('art_gallery', 'Art Galleries') !!}
                                 {!! Form::checkbox('art_gallery') !!}
+                                {!! Form::label('art_gallery', 'Art Galleries') !!}
                             </div>
                         </div>
                     </div>
