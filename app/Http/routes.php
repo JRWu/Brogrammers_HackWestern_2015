@@ -15,20 +15,4 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/family', function () {
-    return view('family');
-});
-
-Route::get('/friends', function () {
-    return view('friends');
-});
-
-Route::get('/partner', function () {
-    return view('partner');
-});
-
-Route::get('/form', function () {
-    return view('form');
-});
-
 Route::post('/results', 'EventsController@getEvents');
