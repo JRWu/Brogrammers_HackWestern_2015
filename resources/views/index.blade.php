@@ -9,7 +9,7 @@
 
     <body>
     <!-- Main page, 3 -->
-        <div class = "container" >
+        <div class = "container" id = "firstbackground">
             <div class = "text-center">
                 <h1 align = "center">Plan A Date</h1>
                 <a href="{{ url('/family') }}" class = "btn btn-default">Family</a>

@@ -1,9 +1,21 @@
-body
+#firstbackground
 {
     background-image: url('../img/image8.jpg');
     height: 100%;
     width: 100%;
     margin: 0;
+}
+#secondbackground
+{
+
+}
+#thirdbackground
+{
+
+}
+#fourthbackground
+{
+
 }
 
 #body1
