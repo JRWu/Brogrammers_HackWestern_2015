@@ -11,6 +11,7 @@ namespace Brogrammers\Events\LogicEngine;
 
 class EventResult
 {
+    public $apiType;
     public $location;
     public $placeName;
     public $address;
@@ -19,4 +20,5 @@ class EventResult
     public $description;
     public $date;
     public $venueName;
+    public $url;
 }

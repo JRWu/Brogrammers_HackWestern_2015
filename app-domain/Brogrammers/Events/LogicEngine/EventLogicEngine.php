@@ -105,6 +105,7 @@ class EventLogicEngine
 
         foreach ($response['results'] as $googleResult) {
             $result = new EventResult();
+            $result->apiType = 'google';
             $result->location = [
                 'lat' => $googleResult['geometry']['location']['lat'],
                 'lng' => $googleResult['geometry']['location']['lng']
@@ -115,6 +116,15 @@ class EventLogicEngine
             if (array_key_exists('opening_hours', $googleResult) && !empty($googleResult['opening_hours'])) {
                 $result->openNow = $googleResult['opening_hours']['open_now'];
             }
+            if (array_key_exists('photos', $googleResult)
+                && !empty($googleResult['photos'])
+                && !empty($googleResult['photos'][0])
+                && !empty($googleResult['photos'][0]['html_attributions'])
+                && !empty($googleResult['photos'][0]['html_attributions'])
+            ) {
+                $result->url = $googleResult['photos'][0]['html_attributions'][0];
+            }
+
             $results[] = $result;
         }
 
@@ -167,11 +177,17 @@ class EventLogicEngine
         foreach ($response['events']['event'] as $event) {
             if ($this->isValidEvent($event)) {
                 $result = new EventResult();
+                $result->apiType = 'eventful';
                 $result->placeName = $event['title'];
                 $result->description = $event['description'];
                 $result->venueName = $event['venue_name'];
                 $result->address = $event['venue_address'];
-                $result->date = $event['start_time'];
+                $result->date = Carbon::parse($event['start_time'])->toRfc850String();
+                $result->url = $event['url'];
+
+                if (!empty($event['image']) && !empty($event['image']['small']) && !empty($event['image']['small']['url'])) {
+                    $result->image = $event['image']['small']['url'];
+                }
 
                 $results[] = $result;
             }
