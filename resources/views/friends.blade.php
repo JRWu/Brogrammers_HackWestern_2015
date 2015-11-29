@@ -1,11 +1,13 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>1-800 Hotline Bling</title>
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../styles/friends.css"/>
+
+    <title>Bootstrap</title>
+    <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
+    <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel = "stylesheet">
+    <link href = "./css/styles.css" rel = "stylesheet">
+    <script href="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- Internet Explorer HTML5 enabling code: -->
 
@@ -15,16 +17,7 @@
 
     <!-- JavaScript Includes -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
 
-            $(".scroll").click(function(event){
-                event.preventDefault();
-                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
-            });
-        });
-
-    </script>
     <script language = "javascript" type ="text/javascript">
         function getCheckedBoxes(chkboxName){
             //console.log('clal')
