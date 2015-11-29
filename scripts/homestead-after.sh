@@ -30,7 +30,6 @@ fi
 if [ ! -f ${GITHUB_CONFIG_CHECK} ]; then
     echo "Configuring Github authentication for Composer..."
     cd /home/vagrant/${PROJECT}
-    composer config github-oauth.github.com f6b5c98d7a1e6d782e2e01656a67bcf7058fa74b
 
     touch ${GITHUB_CONFIG_CHECK}
     echo "Github authentication for Composer successfully configured. Continuing..."
