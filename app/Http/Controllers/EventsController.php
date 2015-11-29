@@ -8,6 +8,7 @@ use Brogrammers\Events\LogicEngine\EventLogicEngine;
 use Brogrammers\Events\LogicEngine\EventQuery;
 use Brogrammers\Events\LogicEngine\EventQueryBuilder;
 use Input;
+use Redirect;
 
 class EventsController extends Controller
 {
@@ -31,18 +32,33 @@ class EventsController extends Controller
      */
     public function getEvents()
     {
-        $input = $this->createCategoriesArray(Input::all());
-        $query = (new EventQueryBuilder($input))->buildQuery();
+        if (empty(Input::get('location'))) {
+            return Redirect::back();
+        }
+
+        $coordinates = $this->google->getCoordinates(Input::get('location'));
+        $categories = $this->createCategoriesArray(Input::all());
+
+        if (empty($categories['categories']) || empty($coordinates)) {
+            return Redirect::back();
+        }
+
+        $location = $coordinates['location'];
+        unset($coordinates['location']);
+
+        $array = [];
+        $array['location'] = $coordinates;
+
+        $query = (new EventQueryBuilder(array_merge($categories, $array)))->buildQuery();
         $results = $this->logicEngine->findEventsNearby($query);
 
-        return view('results', ['events' => $results]);
+        return view('results', ['events' => $results, 'location' => $location]);
     }
 
     private function createCategoriesArray(array $input)
     {
         $array = [];
 
-        $array['location'] = $this->google->getCoordinates($input['location']);
         $array['categories'] = [];
         foreach ($input as $key => $value) {
             if (in_array($key, EventQuery::GOOGLE_TYPES)

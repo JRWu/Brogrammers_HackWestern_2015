@@ -1,10 +1,17 @@
 @extends('layouts.master')
 
 @section('content')
+
+    <h1>Search Results for {!! $location !!}</h1>
+
+    <div>
+        <a href="{{ url('/') }}">Go back</a>
+    </div>
+
     @if(!empty($events))
 
         @foreach($events as $key => $eventList)
-            <h1>{!! $key !!}</h1>
+            <h3>{!! ucwords(str_replace('_', ' ', $key)) . 's' !!}</h3>
             <table class="table" id="table">
                 <tr>
                     <th>Name</th>

@@ -52,6 +52,7 @@ class GooglePlacesApiRepository extends AbstractApiRepository
             $location = $response['results'][0]['geometry']['location'];
 
             $coordinates = [];
+            $coordinates['location'] = $response['results'][0]['formatted_address'];
             $coordinates['latitude'] = $location['lat'];
             $coordinates['longitude'] = $location['lng'];
 
