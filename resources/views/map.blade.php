@@ -125,7 +125,8 @@
     <ul>
         <li><a href="#home" class="scroll">Home</a></li>
         <li><a href="#plans" class="scroll">Plans</a></li>
-        <li><a href="#contact" class="scroll">Contact</a></li>
+        <li><a href="#contact" c
+               lass="scroll">Contact</a></li>
     </ul>
 </nav>
 
