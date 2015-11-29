@@ -15,6 +15,8 @@ class EventResult
     public $placeName;
     public $address;
     public $openNow;
-    public $icon;
+    public $image;
     public $description;
+    public $date;
+    public $venueName;
 }

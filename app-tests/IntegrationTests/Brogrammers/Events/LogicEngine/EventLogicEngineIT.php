@@ -37,6 +37,7 @@ class EventLogicEngineIT extends \TestCase
         $eventQueries = [];
         $eventQueries[] = $this->createEvent('campground', 'family', EventQuery::GOOGLE_TYPE_QUERY);
         $eventQueries[] = $this->createEvent('sushi', 'family', EventQuery::GOOGLE_NAME_QUERY);
+        $eventQueries[] = $this->createEvent('festival', 'family', EventQuery::EVENTFUL);
 
         $results = $this->logicEngine->findEventsNearby($eventQueries);
 

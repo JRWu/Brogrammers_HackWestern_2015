@@ -11,6 +11,7 @@ namespace Brogrammers\Events\LogicEngine;
 
 use Brogrammers\Events\Eventful\Api\EventfulApiRepository;
 use Brogrammers\Events\GooglePlaces\Api\GooglePlacesApiRepository;
+use Carbon\Carbon;
 use Exception;
 
 class EventLogicEngine
@@ -40,9 +41,9 @@ class EventLogicEngine
         $eventResults = [];
         foreach ($eventQueries as $query) {
             if ($this->isGoogleRequest($query)) {
-                $eventResults[$query->category] = $this->getGoogleEvent($query);
+                $eventResults[$query->category] = $this->getGoogleEvents($query);
             } elseif ($this->isEventfulRequest($query)) {
-                $eventResults[$query->category] = $this->getEventfulEvent($query);
+                $eventResults[$query->category] = $this->getEventfulEvents($query);
             }
         }
 
@@ -62,7 +63,7 @@ class EventLogicEngine
      * @param $query
      * @return bool
      */
-    public function isGoogleRequest(EventQuery $query)
+    private function isGoogleRequest(EventQuery $query)
     {
         return $query->type === EventQuery::GOOGLE_TYPE_QUERY || $query->type === EventQuery::GOOGLE_NAME_QUERY;
     }
@@ -71,15 +72,24 @@ class EventLogicEngine
      * @param EventQuery $query
      * @return EventResult
      */
-    private function getGoogleEvent(EventQuery $query)
+    private function getGoogleEvents(EventQuery $query)
     {
-        $googleLocationString = $query->location['latitude'] . ', ' . $query->location['longitude'];
+        $locationString = $this->concatenateLocation($query);
 
         if ($query->type === EventQuery::GOOGLE_TYPE_QUERY) {
-            return $this->executeGoogleTypeQuery($query, $googleLocationString);
+            return $this->executeGoogleTypeQuery($query, $locationString);
         } else {
-            return $this->executeGoogleNameQuery($query, $googleLocationString);
+            return $this->executeGoogleNameQuery($query, $locationString);
         }
+    }
+
+    /**
+     * @param EventQuery $query
+     * @return string
+     */
+    private function concatenateLocation(EventQuery $query)
+    {
+        return $query->location['latitude'] . ', ' . $query->location['longitude'];
     }
 
     private function executeGoogleTypeQuery($query, $googleLocation)
@@ -100,7 +110,7 @@ class EventLogicEngine
                 'lng' => $googleResult['geometry']['location']['lng']
             ];
             $result->placeName = $googleResult['name'];
-            $result->icon = $googleResult['icon'];
+            $result->image = $googleResult['icon'];
             $result->address = $googleResult['vicinity'];
             if (array_key_exists('opening_hours', $googleResult) && !empty($googleResult['opening_hours'])) {
                 $result->openNow = $googleResult['opening_hours']['open_now'];
@@ -122,7 +132,7 @@ class EventLogicEngine
      * @param $query
      * @return bool
      */
-    public function isEventfulRequest($query)
+    private function isEventfulRequest($query)
     {
         return $query->type === EventQuery::EVENTFUL;
     }
@@ -131,11 +141,51 @@ class EventLogicEngine
      * @param $query
      * @return EventResult
      */
-    private function getEventfulEvent($query)
+    private function getEventfulEvents($query)
     {
-        $result = new EventResult();
+        $locationString = $this->concatenateLocation($query);
 
+        return $this->executeEventfulQuery($query, $locationString);
+    }
 
-        return $result;
+    /**
+     * @param $query
+     * @param $locationString
+     * @return array
+     */
+    private function executeEventfulQuery($query, $locationString)
+    {
+        $response = $this->eventful->getEvents($locationString, $query->category);
+
+        return $this->parseEventfulResponse($response);
+    }
+
+    private function parseEventfulResponse($response)
+    {
+        $results = [];
+
+        foreach ($response['events']['event'] as $event) {
+            if ($this->isValidEvent($event)) {
+                $result = new EventResult();
+                $result->placeName = $event['title'];
+                $result->description = $event['description'];
+                $result->venueName = $event['venue_name'];
+                $result->address = $event['venue_address'];
+                $result->date = $event['start_time'];
+
+                $results[] = $result;
+            }
+        }
+
+        return $results;
+    }
+
+    private function isValidEvent($event)
+    {
+        $today = Carbon::now();
+        $oneWeekLater = Carbon::createFromTimestamp($today->getTimestamp())->addWeek();
+        $startDate = Carbon::createFromFormat('Y-m-d H:m:s', $event['start_time']);
+
+        return ($startDate->gte($today) && $startDate->lte($oneWeekLater));
     }
 }

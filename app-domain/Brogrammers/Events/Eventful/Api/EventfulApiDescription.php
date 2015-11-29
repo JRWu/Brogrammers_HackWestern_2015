@@ -29,22 +29,26 @@ class EventfulApiDescription extends AbstractApiDescription
                     'uri'           => 'events/search',
                     'responseModel' => 'JsonResponse',
                     'parameters'    => [
-                        'location' => [
+                        'location'  => [
                             'type'     => 'string',
                             'location' => 'query',
                             'required' => false
                         ],
-                        'keywords' => [
+                        'keywords'  => [
                             'type'     => 'string',
                             'location' => 'query',
                             'required' => false
                         ],
-                        'within' => [
+                        'within'    => [
                             'type'     => 'string',
                             'location' => 'query',
                             'required' => false
                         ],
-
+                        'page_size' => [
+                            'type'     => 'string',
+                            'location' => 'query',
+                            'required' => false
+                        ],
                     ]
                 ],
                 'getVenues' => [
